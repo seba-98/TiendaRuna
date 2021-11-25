@@ -1,0 +1,33 @@
+.productos-section
+{
+	background-color: #C19033;
+}
+.productos-container
+{
+	background-color: #DEC493;
+}
+
+.categorySelection{
+	li{
+		.ulFilter{
+			position: absolute;
+			display: none;
+			right: 320px;
+
+			li{
+				padding: 5px;
+				margin: 2px;
+				background-color: #C19033;
+				border-radius: 5px;
+				color: rgb(68, 68, 68);
+				font-size: 17px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+li:hover{
+	.ulFilter{
+		display: block;
+	}
+}

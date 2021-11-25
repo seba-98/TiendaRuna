@@ -1,0 +1,32 @@
+footer 
+{
+    background-color: #1F1F1F;
+    min-height: 250px;
+}
+.hover-links 
+{
+    &:hover
+    {
+        transition: all 420ms;
+        color: #C97721 !important;
+    }
+}
+.hover-redes
+{
+    &:hover
+    {
+        i 
+        {
+            transition: all 420ms;
+            color: #C97721 !important;
+        }
+    }
+}
+ul 
+{
+    list-style: none;
+
+    button{
+        background-color: #1F1F1F;
+    }
+}

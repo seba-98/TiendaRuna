@@ -1,0 +1,41 @@
+.sidebar-wrapper
+{
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    z-index: 100;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+
+    li 
+    {
+        
+        a 
+        {
+            transition: all 420ms;
+            &:hover
+            {
+                color: #C97721;
+            }
+        }
+    }
+}
+.arrow-wrapper
+{
+    position:  absolute;
+    right: 110px;
+}
+.submenu
+{
+    cursor: pointer;
+    overflow: hidden;
+}
+.cross-wrapper
+{
+    margin-left: 88%;
+    margin-top: 6%;
+    cursor: pointer;
+}
