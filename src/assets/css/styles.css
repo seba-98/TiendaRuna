@@ -1,15 +1,15 @@
 .navbar {
   background-color: #C19033;
-  height: 100px;
+  height: 140px;
   z-index: 1; }
 
 #hamburger {
   background-color: #C19033; }
 
 .navbar-wrapper {
-  height: 100px; }
+  height: 130px; }
   .navbar-wrapper .hamburger-wrapper i {
-    font-size: 32px; }
+    font-size: 60px; }
 
 .header-bar {
   z-index: 1;
@@ -33,7 +33,9 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.38);
-  width: 400px;
+  width: 500px;
+  height: 50px;
+  font-size: 25px;
   padding: 7px 0;
   padding-left: 19px; }
   .input-runa::placeholder {
@@ -45,7 +47,10 @@
   color: #fff; }
 
 .login-wrapper i {
-  font-size: 34px; }
+  font-size: 50px; }
+
+.logo-wrapper a img {
+  width: 200px; }
 
 .btn-runa {
   background-color: #fff !important;
@@ -89,17 +94,32 @@
 .fs-72 {
   font-size: 72px; }
 
-@media (max-width: 668px) {
-  .input-runa {
+@media (max-width: 1000px) {
+  .login-wrapper {
+    display: none !important; }
+  .input-buscando-wrapper {
     display: none; } }
+
+@media (max-width: 374px) {
+  .logo-wrapper a img {
+    width: 140px !important; }
+  .hamburger-wrapper i {
+    font-size: 40px !important; } }
+
+@media (max-width: 580px) {
+  .logo-banner {
+    width: 280px;
+    height: 126px; }
+  .fs-72 {
+    font-size: 62px; } }
 
 .sidebar-wrapper {
   height: 100vh;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   left: 0;
   top: 0;
-  width: 30%;
+  width: 500px;
   z-index: 100;
   border-top-right-radius: 28px;
   border-bottom-right-radius: 28px; }
@@ -121,8 +141,12 @@
   margin-top: 6%;
   cursor: pointer; }
 
+@media (max-width: 650px) {
+  .sidebar-wrapper {
+    width: 300px !important; } }
+
 .middle-text {
-  width: 98%;
+  width: 85% !important;
   height: auto;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -131,8 +155,36 @@
   padding: 0px auto;
   padding-left: 29%;
   line-height: 45px;
-  font-size: 20px;
   color: #fff; }
+  .middle-text span {
+    font-size: 30px; }
+
+.categoryList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .categoryList div {
+    width: 23%;
+    margin: 10px  1% 10px 1%; }
+    .categoryList div div {
+      width: 100%; }
+  .categoryList img {
+    border-radius: 25px;
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+    background-position: center;
+    background-attachment: fixed;
+    background-clip: border-box; }
+
+@media (max-width: 1410px) {
+  .categoryList div {
+    width: 300px; }
+    .categoryList div img {
+      height: 300px; }
+    .categoryList div span {
+      font-size: 17px; } }
 
 .fondo-color {
   width: 100%;
@@ -142,10 +194,28 @@
   display: flex;
   justify-content: center; }
 
+.marca {
+  width: 23%; }
+
 .logo-marca {
   width: 130px;
   height: 130px;
   margin-top: 4px; }
+
+.marcasContainer {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.imageMarcas {
+  width: 100%; }
+
+@media (max-width: 1180px) {
+  .marca {
+    width: 260px; } }
 
 footer {
   background-color: #1F1F1F;
@@ -238,7 +308,7 @@ li:hover .ulFilter {
     border-radius: 50px;
     padding: 0 60px 0 60px;
     margin: 30px 0 30px 0;
-    height: 600px;
+    height: 970px;
     width: 50%; }
     .formContainer .loginForm .loginGroup {
       display: flex;
@@ -247,6 +317,7 @@ li:hover .ulFilter {
       margin: 15px 0 5px 0; }
       .formContainer .loginForm .loginGroup .place {
         width: 80%;
+        height: 55px;
         padding: 5px;
         border: 1px solid #bdbdbd;
         border-radius: 6px;
@@ -254,7 +325,7 @@ li:hover .ulFilter {
         .formContainer .loginForm .loginGroup .place:hover {
           box-shadow: 1px 1px 10px #478dff; }
       .formContainer .loginForm .loginGroup .subYes {
-        padding: 10px;
+        padding: 15px;
         border: none;
         background-color: #1e98fb;
         font-weight: bold;

@@ -43,7 +43,7 @@
         border-radius: 50px;
         padding: 0 60px 0 60px;
         margin: 30px 0 30px 0;
-        height: 600px;
+        height: 970px;
         width: 50%;
         .loginGroup{
             display: flex;
@@ -53,6 +53,7 @@
 
             .place{
                 width: 80%;
+                height: 55px;
                 padding: 5px;
                 border: 1px solid rgb(189, 189, 189);
                 border-radius: 6px;
@@ -63,7 +64,7 @@
             }
 
             .subYes{
-                padding: 10px;
+                padding: 15px;
                 border: none;
                 background-color: rgb(30, 152, 251);
                 font-weight: bold;

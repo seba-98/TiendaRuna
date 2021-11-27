@@ -1,7 +1,7 @@
 
 .middle-text
 {
-	width: 98%;
+	width: 85% !important;
     height: auto;
     background-color: rgba(0,0,0,0.4);
     position: absolute;
@@ -10,6 +10,51 @@
     padding: 0px auto;
     padding-left: 29%;
     line-height: 45px;
-    font-size: 20px;
     color: #fff;
+    
+    span{
+        font-size:30px ;
+
+    }
+}
+
+.categoryList{
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+
+div{
+    width: 23%;
+    margin: 10px  1% 10px 1%;
+    div{
+        width: 100%;
+    }
+}
+
+    img{
+        border-radius: 25px;
+        width: 90%;
+        height: 500px;
+        overflow: hidden;
+        background-position: center;
+        background-attachment: fixed;
+        background-clip: border-box;
+    }
+}
+
+
+@media(max-width:1410px){
+    .categoryList{
+       div{
+           width: 300px;
+           img{
+               height: 300px;
+           }
+           span{
+            font-size:17px ;
+        }
+       }
+    }
+
 }

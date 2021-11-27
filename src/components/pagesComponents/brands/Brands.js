@@ -15,41 +15,41 @@ const Brands = () => {
         </div>
 
          {/* MARCAS  */}
-         <div className="row mb-5">
-            <div className="col-3" >              
+         <div className="row mb-5 marcasContainer">
+            <div className='marca' >              
                 <div className="marca-wrapper position-relative">  
                        {/* MARCA :: COLOR FONDO  */}
                     <div className="position-absolute fondo-color">  
                         <img src={logo} alt="Marca Selva Madre" className="logo-marca"/>                     
                     </div>            
-                   <img src={marca} alt="Marcas Runa Tienda" className="img-fluid "/>
+                   <img src={marca} alt="Marcas Runa Tienda" className="img-fluid imageMarcas"/>
                 </div>
             </div>
-            <div className="col-3">
+            <div className='marca'>
                 <div className="marca-wrapper position-relative">  
                    { /* MARCA :: COLOR FONDO */}
                  <div className="position-absolute fondo-color">  
                      <img src={logo} alt="Marca Selva Madre" className="logo-marca"/>                     
                  </div>            
-                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid "/>
+                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid imageMarcas"/>
              </div>
             </div>
-            <div className="col-3">
+            <div className='marca'>
                 <div className="marca-wrapper position-relative">  
                     {/* MARCA :: COLOR FONDO  */}
                  <div className="position-absolute fondo-color">  
                      <img src={logo} alt="Marca Selva Madre" className="logo-marca"/>                     
                  </div>            
-                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid "/>
+                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid imageMarcas"/>
              </div>
             </div>
-            <div className="col-3">
+            <div className='marca'>
                 <div className="marca-wrapper position-relative">  
                     {/* MARCA :: COLOR FONDO  */}
                  <div className="position-absolute fondo-color">  
                      <img src={logo} alt="Marca Selva Madre" className="logo-marca"/>                     
                  </div>            
-                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid "/>
+                <img src={marca} alt="Marcas Runa Tienda" className="img-fluid imageMarcas"/>
              </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
-.fondo-color
-{
+.fondo-color{
+
     width: 100%;
     height: 25%;
     background-color: #E26767;
@@ -7,9 +7,33 @@
     display: flex;
     justify-content: center;
 }
+
+.marca{
+    width: 23%;
+}
 .logo-marca
 {
     width: 130px;
     height: 130px;
     margin-top: 4px;
+}
+
+.marcasContainer{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imageMarcas{
+    width: 100%;
+}
+
+@media(max-width:1180px){
+    .marca{
+        width: 260px;
+    }
+
 }

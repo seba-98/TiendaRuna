@@ -14,9 +14,11 @@ const Navbar = ({over}) => {
                 <div className="row w-100">
                     <div className="col-12">
                         <div className="navbar-wrapper d-flex justify-content-between align-items-center w-100">
-                            <div className="hamburger-wrapper pointer">
+
+                            <div className="hamburger-wrapper pointer navItem">
                                 <button className="text-dark" id="hamburger" onClick={()=>{over(true)}}><i className="fas fa-bars pointer"></i></button>                              
                             </div>
+
                             <div className="logo-wrapper">
                             <Link to='/'><img src={logo} alt="Runa Tienda"/></Link>
                             </div>
@@ -25,6 +27,7 @@ const Navbar = ({over}) => {
                                 <input type="text" name="buscar" id="buscarInput" className="input-runa text-white" placeholder="¿Qué estás buscando?"/>
                                 <i className="fas fa-search position-absolute "></i>
                             </div>
+
                             <div className="login-wrapper d-flex justify-content-center align-items-center">
                                 <i className="far fa-user text-white me-3"></i>
                                 <div className="d-flex flex-column">

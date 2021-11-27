@@ -1,11 +1,11 @@
 .sidebar-wrapper
 {
     height: 100vh;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     position: fixed;
     left: 0;
     top: 0;
-    width: 30%;
+    width: 500px;
     z-index: 100;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -38,4 +38,11 @@
     margin-left: 88%;
     margin-top: 6%;
     cursor: pointer;
+}
+
+@media(max-width: 650px){
+
+    .sidebar-wrapper{
+        width: 300px !important;
+    }
 }

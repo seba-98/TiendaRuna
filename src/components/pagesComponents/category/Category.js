@@ -1,7 +1,28 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import sahu from '../../../assets/img/sahumerios.png'
-import herb from '../../../assets/img/bannerCategoria.png'
+
+import aqua from './categoryImg/aqua.jpg'
+import herb from './categoryImg/herb.jpg'
+import sahu from './categoryImg/sahu.jpg'
+import aguayos from './categoryImg/aguayos.jpg'
+import cannabic from './categoryImg/cannabic.jpg'
+import carbon from './categoryImg/carbon.jpg'
+import cono from './categoryImg/cono.jpg'
+import difusores from './categoryImg/difusores.jpg'
+import frutos from './categoryImg/frutos.jpg'
+import mat from './categoryImg/matYog.jpg'
+import santo from './categoryImg/paloSanto.jpg'
+import sahumadores from './categoryImg/sahumadores.jpg'
+import sahuPolv from './categoryImg/sahuPolv.jpg'
+import sahuRes from './categoryImg/sahuRes.jpg'
+import sahuHerb from './categoryImg/sahuHerb.jpg'
+import sahuNat from './categoryImg/sahuNat.jpg'
+import tarot from './categoryImg/tarot.jpg'
+import velas from './categoryImg/velas.jpg'
+import sagMadre from './categoryImg/sagMadre.jpg'
+import sahumos from './categoryImg/sahumos.jpg'
+
+
 
 
 const Category = () => {
@@ -10,7 +31,7 @@ const Category = () => {
 
     return (
       <>
-        <div class="row ms-5 mb-3">
+        <div class="row ms-5 mb-3 mt-3">
           <div class="col-12">
             <div class="d-flex align-items-center">
               <h3 class="text-dark me-3">CATEGORIAS DESTACADAS</h3>
@@ -27,122 +48,122 @@ const Category = () => {
         </div>
 
         {allCategory === false ? (
-          <div className="row mb-5 row">
-            <div className="col-3">
-              <Link to={`/home/products/${"SahuHierbas"}`}>
+          <div className='categoryList'>
+            <div >
+              <Link to={`/home/products/${"SahuHierbas"}`}  state={{img:sahuHerb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
                   </div>
-                  <img src={herb} alt="hierbas" className="img-fluid " />
+                  <img src={sahuHerb} alt="hierbas" className="img-fluid categoryImg" />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SahuPolvo"}`}>
+            <div>
+              <Link to={`/home/products/${"SahuPolvo"}`} state={{img:sahuPolv}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Polvos para sahumar</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuPolv} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Palosanto"}`}>
+            <div>
+              <Link to={`/home/products/${"Palosanto"}`} state={{img:santo}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Palo santo</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={santo} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Hierbas"}`}>
+            <div>
+              <Link to={`/home/products/${"Hierbas"}`} state={{img:herb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={herb} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
           </div>
         ) : (
-          <div className="row mb-5 row">
-           <div className="col-3">
-              <Link to={`/home/products/${"SahuHierbas"}`}>
+          <div className='categoryList'>
+           <div>
+              <Link to={`/home/products/${"SahuHierbas"}`} state={{img:sahuHerb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
                   </div>
-                  <img src={herb} alt="hierbas" className="img-fluid " />
+                  <img src={sahuHerb} alt="hierbas" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SahuPolvo"}`}>
+            <div >
+              <Link to={`/home/products/${"SahuPolvo"}`} state={{img:sahuPolv}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Polvos para sahumar</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuPolv} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Palosanto"}`}>
+            <div>
+              <Link to={`/home/products/${"Palosanto"}`} state={{img:santo}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Palo santo</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={santo} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Hierbas"}`}>
+            <div>
+              <Link to={`/home/products/${"Hierbas"}`} state={{img:herb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={herb} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SahuResinas"}`}>
+            <div >
+              <Link to={`/home/products/${"SahuResinas"}`} state={{img:sahuRes}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Resinas para sahumar</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuRes} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SahuNat"}`}>
+            <div >
+              <Link to={`/home/products/${"SahuNat"}`} state={{img:sahuNat}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumos naturales: blends de hierbas y resinas</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuNat} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SagMadre"}`}>
+            <div >
+              <Link to={`/home/products/${"SagMadre"}`} state={{img:sagMadre}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Linea sagrada madre</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sagMadre} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Satyaygoloka"}`}>
+            <div >
+              <Link to={`/home/products/${"Satyaygoloka"}`} state={{img:sahu}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios SATYA Y GOLOKA</span>
@@ -151,18 +172,18 @@ const Category = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"TribalSoul"}`}>
+            <div>
+              <Link to={`/home/products/${"TribalSoul"}`} state={{img:cono}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios y conitos TRIBAL SOUL INDIA</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={cono} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"SreeVani"}`}>
+            <div>
+              <Link to={`/home/products/${"SreeVani"}`} state={{img:sahu}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios india Sree vani y Sandesh</span>
@@ -171,103 +192,113 @@ const Category = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Aquas"}`}>
+            <div>
+              <Link to={`/home/products/${"Aquas"}`} state={{img:aqua}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Aguas florida y colonias MyL</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={aqua} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Carbon"}`}>
+            <div>
+              <Link to={`/home/products/${"Carbon"}`} state={{img:carbon}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Carbones</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={carbon} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"MatYoga"}`}>
+            <div>
+              <Link to={`/home/products/${"MatYoga"}`} state={{img:mat}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Mat de yoga</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={mat} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Tarot"}`}>
+            <div>
+              <Link to={`/home/products/${"Tarot"}`} state={{img:tarot}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Tarot, cartas, oraculos y runas vikingas</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={tarot} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Palosanto"}`}>
+            <div>
+              <Link to={`/home/products/${"Aguayos"}`} state={{img:aguayos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
-                    <span>Palo santo</span>
+                    <span>Aguayos</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={aguayos} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Difusores"}`}>
+            <div>
+              <Link to={`/home/products/${"Sahumadores"}`} state={{img:sahumadores}}>
+                <div className=" position-relative ">
+                  <div className="middle-text">
+                    <span>Sahumadores</span>
+                  </div>
+                  <img src={sahumadores} alt="Sahumerios" className="img-fluid " />
+                </div>
+              </Link>
+            </div>
+            <div>
+              <Link to={`/home/products/${"Difusores"}`} state={{img:difusores}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Difusores y aromatizantes</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={difusores} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Sahumos"}`}>
+            <div>
+              <Link to={`/home/products/${"Sahumos"}`} state={{img:sahumos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumos</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahumos} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Velas"}`}>
+            <div>
+              <Link to={`/home/products/${"Velas"}`} state={{img:velas}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Escencias y velas</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={velas} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Cannabic"}`}>
+            <div>
+              <Link to={`/home/products/${"Cannabic"}`} state={{img:cannabic}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Medicina cannabica</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={cannabic} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>
-            <div className="col-3">
-              <Link to={`/home/products/${"Frutos"}`}>
+            <div>
+              <Link to={`/home/products/${"Frutos"}`}  state={{img:frutos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Frutos secos</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={frutos} alt="Sahumerios" className="img-fluid " />
                 </div>
               </Link>
             </div>

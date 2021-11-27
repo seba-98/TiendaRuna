@@ -1,7 +1,7 @@
 .navbar
 {
     background-color: #C19033;
-    height: 100px;
+    height: 140px;
     z-index: 1;
 }
 
@@ -11,15 +11,13 @@
 
 .navbar-wrapper
 {
-    
-    height: 100px;
+    height: 130px;
     .hamburger-wrapper
     {
         i 
         {
-            font-size: 32px;
+            font-size: 60px;
         }
-      
     }
 }
 .header-bar
@@ -48,7 +46,9 @@
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px );  
     border: 1px solid rgba( 255, 255, 255, 0.38 );
-    width: 400px;
+    width: 500px;
+    height: 50px;
+    font-size: 25px;
     padding: 7px 0;
     padding-left: 19px;    
     &::placeholder
@@ -69,7 +69,15 @@
 {
     i 
     {
-        font-size: 34px;
+        font-size: 50px;
+    }
+}
+
+.logo-wrapper{
+    a{
+        img{
+            width: 200px;
+        }
     }
 }
 .btn-runa
@@ -124,20 +132,49 @@
     height: 186px;
 }
 .fs-72
-{
+{ 
     font-size: 72px;
 }
 
-@media(max-width: 668px){
-
-    .input-runa{
-
+@media(max-width: 1000px){
+    .login-wrapper
+{
+    display: none !important;
+}
+    .input-buscando-wrapper{
         display: none;
-        
+    }
+}
 
+
+@media(max-width: 374px){
+
+    .logo-wrapper{
+        a{
+            img{
+                width: 140px !important;
+            }
+        }
+    }
+    .hamburger-wrapper
+    {
+        i 
+        {
+            font-size: 40px !important  ;
+        }
     }
 
-  
+}
 
-
+@media(max-width: 580px){
+    .logo-banner 
+{
+    width: 280px;
+    height: 126px;
+}
+.fs-72
+{ 
+    font-size: 62px;
+}
+    
 }

@@ -10,7 +10,7 @@ const Home = () => {
 
         <>
             <Banner img={homeImg} height='820px'/>
-            <div className="container mt-5">
+            <div >
                 <Category />    
                 <Brands />
             </div>
