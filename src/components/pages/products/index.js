@@ -109,7 +109,7 @@ const Products =()=> {
 							</div>
 
 							<div class="d-flex justify-content-start">
-								<Link to={`/home/products/Hierbas/car/${product.id}`}><button type="button" class="btn border border-dark"><i class="fas fa-cart-plus"></i>Ver producto</button></Link>
+								<Link to={`/itemDetail/${product.id}`}><button type="button" class="btn border border-dark"><i class="fas fa-cart-plus"></i>Ver producto</button></Link>
 							</div>
 						</div>
 

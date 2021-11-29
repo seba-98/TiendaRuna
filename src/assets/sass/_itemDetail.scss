@@ -1,0 +1,79 @@
+.detailContent, .itemImages, .itemDescription, .itemPrice, .buttonContainer, .itemButtons{
+    display: flex;
+}
+
+.detailContent{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    h2{
+        margin: 50px 0 50px 0;
+    }
+}
+
+.itemImages{
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    img{
+        border-radius: 23px;
+        width: 400px;
+        height: 400px;
+    } 
+}
+.itemDescription{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    justify-content: center;
+    margin: 30px 0 30px 0;
+}
+
+.itemPrice{
+    flex-direction: row;
+   
+        font-weight: bold;
+        font-size: 24px;
+    
+    span{
+        color: rgb(94, 148, 40);
+    }
+}
+
+.itemButtons{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttonContainer{
+    border: 2px solid rgb(211, 211, 211);
+    flex-direction: row;
+    border-radius: 10px;
+
+    p, button{
+        border: none;
+        padding: 25px;
+    }
+    .menos{
+        color: white;
+        background-color: rgb(235, 70, 70);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .mas{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: white;
+        background-color: rgb(136, 235, 70);
+    }
+}

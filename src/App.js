@@ -6,25 +6,28 @@ import Products from "./components/pages/products/index";
 import Footer from "./components/pagesComponents/footer/Footer";
 import Overlay from "./components/pagesComponents/overlay/Overlay";
 import Admin from "./components/pages/admin/index";
-import Cart from "./components/pages/cart";
+import ItemDetail from "./components/pages/itemDetail/index";
 import { useState } from "react";
+import { CartProvider } from './CartContext'
 
 function App() {
-
+  
   const [openOver, setOpenOver]= useState(false)
-
+  
   return (
     <div className="App">
-      <Header over={(e)=>{setOpenOver(e)}}/>
-        <Routes>
-          <Route  path="/" exact element={<Home />}  />
-          <Route  path="/home" exact element={<Home />}  />
-          <Route  path="home/products/:id" exact element={<Products/>}/>
-          <Route  path="home/admin" exact element={<Admin/>}/>
-          <Route  path="/home/products/Hierbas/car/:id" exact element={<Cart/>}/>
-        </Routes>
-        {openOver === true && <Overlay over={(e)=>{setOpenOver(e)}}/>}
-      <Footer />
+      <CartProvider >
+        <Header over={(e)=>{setOpenOver(e)}}/>
+          <Routes>
+              <Route  path="/" exact element={<Home />}  />
+              <Route  path="/home" exact element={<Home />}  />
+              <Route  path="home/products/:id" exact element={<Products/>}/>
+              <Route  path="home/admin" exact element={<Admin/>}/>
+              <Route  path="/itemDetail/:id" exact element={<ItemDetail/>}/>
+          </Routes>
+          {openOver === true && <Overlay over={(e)=>{setOpenOver(e)}}/>}
+        <Footer />
+      </CartProvider>
     </div>
   );
 }

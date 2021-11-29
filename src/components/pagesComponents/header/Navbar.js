@@ -1,13 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/img/logo.png'
+import { cartContext } from '../../../CartContext'
 
 
 const Navbar = ({over}) => {
+    const [carrito]=useContext(cartContext);
+    let cant=0;
+    for (const item of carrito) {
+        cant= cant + item.cantidad;
+        console.log(cant)
+    }
     
-
     return (
-
       <>  
         <div className="w-100 navbar">
             <div className="container">
@@ -40,7 +45,7 @@ const Navbar = ({over}) => {
                             <div className="carrito-wrapper mt-2 position-relative pointer">
                                 <i className="fas fa-shopping-cart text-white"></i>
                                 <div className="counter-wrapper position-absolute ">
-                                    <span>0</span>
+                                    <span>{carrito.reduce((total, item)=>{return total + item.cantidad},0) }</span>
                                 </div>
                             </div>
                         </div>
