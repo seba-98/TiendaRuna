@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../../../firebaseConfig';
+import swal from 'sweetalert';
 const auth= getAuth(app);
 
 
@@ -9,9 +10,27 @@ const Login = () => {
 const [user, setUser]=useState('');
 const [password, setPassword]=useState('');
 
-const submitHandler = async(e)=>{
+
+
+const submitHandler = (e)=>{
     e.preventDefault();
-    signInWithEmailAndPassword(auth, user, password)
+    
+        signInWithEmailAndPassword(auth, user, password).then(r=>{
+
+            swal({
+                title:'Iniciaste sesión',
+                icon:'success'
+            })
+        })
+        .catch(r=>{
+
+            swal({
+                title:'Error',
+                text:'datos no validos',
+                icon:'success'
+            })
+        })
+
 }
 
     return (

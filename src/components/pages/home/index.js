@@ -7,10 +7,9 @@ import homeImg from '../../../assets/img/banner.png'
 const Home = () => {
     return (
 
-
         <>
             <Banner img={homeImg} height='820px'/>
-            <div >
+            <div className='home'>
                 <Category />    
                 <Brands />
             </div>

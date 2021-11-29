@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { addDoc, collection} from '@firebase/firestore';
 import { db, app } from '../../../../firebaseConfig';
+import swal from 'sweetalert';
 
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -21,6 +22,10 @@ const Add = () => {
             
             setImage1('');
             setImage2('')
+            swal({
+                title:'Producto creado',
+                icon:'success'
+            })
            
             resetForm({data: ''})
             
@@ -60,24 +65,35 @@ const Add = () => {
            
            if(file1 && !file2 &&  ( file1.type !=='image/jpeg' &&  file1.type !=='image/png' && file1.type !=='image/jpg')){
 
-            console.log(Error)
+            swal({
+                title:'Error, formatos admitidos jpg, jpeg y png',
+                icon:'warning'
+            })
 
            }
            else if(file1 && file2 && ((file1.type !== 'image/jpeg' && file1.type !== 'image/png'&&  file1.type !== 'image/jpg') || ( file2.type !=='image/jpeg' && file2.type !=='image/png' && file2.type !=='image/jpg'))) {
-            console.log(Error)
+            swal({
+                title:'Error, formatos admitidos jpg, jpeg y png',
+                icon:'warning'
+            })
            }
            else if(file1 && !file2 && (file1.type === 'image/jpeg' || file1.type === 'image/png'|| file1.type === 'image/jpg')){
-            console.log('GOOD')
-            const storagePath = storageRef.child(file1.name);
-            try{
-                const enviar= await storagePath.put(file1)
-                console.log(enviar)
-                 
-                 const url1 = await storagePath.getDownloadURL();
-                 setImage1(url1)
+               const storagePath = storageRef.child(file1.name);
+               try{
+                   const enviar= await storagePath.put(file1)
+                   const url1 = await storagePath.getDownloadURL();
+                   setImage1(url1)
+                   swal({
+                       title:'Imagen subida a la base de datos',
+                       icon:'success'
+                   })
+
             }
             catch(error){
-                console.log(error)
+                swal({
+                    title:'Error, formatos admitidos jpg, jpeg y png',
+                    icon:'warning'
+                })
                 
             }
            }else if(file1 && file2 && ((file1.type ==='image/jpeg' ||file1.type ==='image/png'|| file1.type ==='image/jpg') && (file2.type === 'image/jpeg' || file2.type ==='image/png'|| file2.type === 'image/jpg'))){
@@ -88,16 +104,20 @@ const Add = () => {
                 try{
                 const enviar1=await storagePath.put(file1)
                 const enviar2=await storagePath2.put(file2) 
-                console.log(enviar1, enviar2)
-               
-    
                 const url1 = await storagePath.getDownloadURL();
                 const url2 = await storagePath2.getDownloadURL();
                 setImage1(url1)
                 setImage2(url2)
+                swal({
+                    title:'Imagenes subidas a la base de datos',
+                    icon:'success'
+                })
                 }
                 catch(error){
-                    console.log(error)
+                    swal({
+                        title:'Error, formatos admitidos jpg, jpeg y png',
+                        icon:'warning'
+                    })
                     
                 } 
         }

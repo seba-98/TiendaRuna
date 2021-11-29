@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth';
 import { app } from '../../../firebaseConfig';
-import Swal from 'sweet-alert'
+import swal from 'sweetalert'
 
 import Login from '../../pagesComponents/login/Login';
 import Add from '../../pagesComponents/adminComponents/add/Add';
@@ -15,6 +15,7 @@ const Admin = () => {
 
     const [window, setWindow]=useState('add');
     const [globalUser, setGlobalUser]= useState(null)
+
 
 
     onAuthStateChanged(auth, (user)=>{ 
@@ -52,7 +53,12 @@ const Admin = () => {
                             <li style={{backgroundColor: window==='update' && '#B87800', color: window==='update' && 'white'}} onClick={()=>{setWindow('update')}}>Actualizar</li>
                             <li style={{backgroundColor: window==='sells' && '#B87800', color: window==='sells' && 'white'}} onClick={()=>{setWindow('sells')}}>Ventas</li>
                              <li onClick={()=>{
-                                signOut(auth)}}>Cerrar sesión</li> 
+                                 signOut(auth)
+                                 swal({
+                                     title:'Cerraste sesión',
+                                     icon:'warning'
+                                 })
+                                }}>Cerrar sesión</li> 
                         </ul>
                     </nav>
                 { render()}

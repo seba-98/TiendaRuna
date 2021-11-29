@@ -31,7 +31,7 @@ const Category = () => {
 
     return (
       <>
-        <div class="row ms-5 mb-3 mt-3">
+        <div class="row ms-5 mb-3 mt-3 categoryTitle">
           <div class="col-12">
             <div class="d-flex align-items-center">
               <h3 class="text-dark me-3">CATEGORIAS DESTACADAS</h3>

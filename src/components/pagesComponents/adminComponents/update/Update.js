@@ -43,7 +43,7 @@ const Update = () => {
 
 
     const product ={
-        category:formik.values.category,
+        category:formik.values.category.toLowerCase(),
         image1: image1,
         image2: image2,
         info: formik.values.info.trim(),
@@ -131,7 +131,11 @@ const Update = () => {
 
         try{//al encontrar el producto habilitamos los campos y los rellenamos por defecto con los datos originales del producto
             const document = await getDoc(docRef);
-            console.log(document.data())
+
+            swal({
+                title:'Producto encontrado',
+                icon:'success'
+            })
 
             formik.setFieldValue('category', document.data().category)
             formik.setFieldValue('name', document.data().name)
@@ -140,6 +144,7 @@ const Update = () => {
 
             setImage1(document.data().image1)
             setImage2(document.data().image2)
+
 
             setUpdateProduct(true)
         }
@@ -174,7 +179,7 @@ const Update = () => {
                 <div className="formGroup">
                     <label htmlFor="">Categoría</label>
                     <select name="category" id="" className='places' disabled={updateProduct ? false : true} onChange={formik.handleChange} value={formik.values.category} style={formik.errors.category && inputError}>
-                         <option value="SahuHierbas">Hierbas para sahumar</option>
+                        <option value="SahuHierbas">Hierbas para sahumar</option>
                         <option value="SahuPolvo">Polvos para sahumar</option>
                         <option value="SahuResinas">Resinas para sahumar</option>
                         <option value="SahuNat">Sahumos naturales: blends de hierbas y resinas</option>

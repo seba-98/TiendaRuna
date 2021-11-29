@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getDocs, deleteDoc, collection, doc,  } from '@firebase/firestore';
 import { db } from '../../../../firebaseConfig';
 import Preload from '../../../widgets/preload/Preload'
+import swal from 'sweetalert';
 
 
 const Remove = () => {
@@ -26,7 +27,10 @@ const Remove = () => {
     const remove= async(e, id)=>{
         e.preventDefault();
         await deleteDoc(doc(db, "products", id)).then(response=>{
-            
+            swal({
+                title:'Producto eliminado de la tienda',
+                icon:'warning'
+            })
         });
         dataRequest();
     }
