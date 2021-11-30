@@ -108,7 +108,7 @@ const ItemDetail = () => {
 
                 <h2>{article.name}</h2>
             <div className="itemImages">
-                <img src={article.image1} alt="" /><img src={article.image2} alt=""  />
+                <img src={article.image1} alt="" /> {article.image2 ? <img src={article.image2} alt=""  /> : null} 
             </div>
             <div className="itemDescription">
                 <p>{article.info}</p>

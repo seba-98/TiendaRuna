@@ -444,6 +444,81 @@ form {
     color: white;
     background-color: #88eb46; }
 
+.cartContainer {
+  height: auto;
+  min-height: 600px;
+  width: 100%;
+  list-style: none;
+  padding: 0%; }
+  .cartContainer h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; }
+  .cartContainer li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 8px solid rgba(193, 144, 51, 0.4);
+    border-radius: 10px;
+    margin: 30px 0 30px 0; }
+    .cartContainer li img {
+      justify-content: center;
+      border-radius: 10px; }
+    .cartContainer li .cartInfo {
+      height: auto;
+      display: flex;
+      width: auto;
+      flex-direction: column;
+      justify-content: center; }
+      .cartContainer li .cartInfo p {
+        font-size: 23px;
+        font-weight: bold;
+        color: #3b3b3b; }
+  .cartContainer .cartButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 50px 0 50px 0;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold; }
+  .cartContainer .cartButtonContainer {
+    display: flex;
+    border: 2px solid lightgray;
+    flex-direction: row;
+    border-radius: 10px; }
+    .cartContainer .cartButtonContainer p, .cartContainer .cartButtonContainer button {
+      border: none;
+      padding: 20px; }
+    .cartContainer .cartButtonContainer .cartMenos {
+      display: flex;
+      color: white;
+      background-color: #eb4646;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; }
+    .cartContainer .cartButtonContainer .cartMas {
+      display: flex;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: white;
+      background-color: #88eb46; }
+  .cartContainer .finalPrice {
+    border: none;
+    border-bottom: 8px solid rgba(243, 108, 108, 0.5);
+    font-size: 30px; }
+  .cartContainer .btnFinalCompra {
+    border: none; }
+    .cartContainer .btnFinalCompra button {
+      padding: 10px;
+      font-size: 20px;
+      background-color: #0084ff;
+      border-radius: 6px;
+      color: white;
+      transition: all 0.5s; }
+      .cartContainer .btnFinalCompra button:hover {
+        background-color: #6cb7fd; }
+
 button {
   border: none;
   background-color: none; }

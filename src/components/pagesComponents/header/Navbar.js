@@ -12,6 +12,7 @@ const Navbar = ({over}) => {
         console.log(cant)
     }
     
+    
     return (
       <>  
         <div className="w-100 navbar">
@@ -42,12 +43,14 @@ const Navbar = ({over}) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrito-wrapper mt-2 position-relative pointer">
-                                <i className="fas fa-shopping-cart text-white"></i>
-                                <div className="counter-wrapper position-absolute ">
-                                    <span>{carrito.reduce((total, item)=>{return total + item.cantidad},0) }</span>
+                            <Link to='/cart'>
+                                <div className="carrito-wrapper mt-2 position-relative pointer">
+                                    <i className="fas fa-shopping-cart text-white"></i>
+                                    <div className="counter-wrapper position-absolute ">
+                                        <span>{carrito.reduce((total, item)=>{return total + item.cantidad},0) }</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

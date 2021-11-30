@@ -1,0 +1,96 @@
+.cartContainer{
+    height: auto;
+    min-height: 600px;
+    width: 100%;
+    list-style: none;
+    padding: 0%;
+    h3{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    li{
+        display:flex;   
+        flex-wrap: wrap;
+        justify-content: space-around;
+        img{
+            justify-content: center;
+            border-radius: 10px;
+        }
+        border: 8px solid rgba(193,144,51, 0.4);
+        border-radius: 10px;
+        margin: 30px 0 30px 0;
+        .cartInfo{
+            height: auto;
+            display: flex;
+            width: auto;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 23px;
+                font-weight: bold;
+                color: rgb(59, 59, 59);
+            }
+        }
+    }
+
+
+    .cartButtons{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 50px 0 50px 0;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .cartButtonContainer{
+        display:flex;
+        border: 2px solid rgb(211, 211, 211);
+        flex-direction: row;
+        border-radius: 10px;
+    
+        p, button{
+            border: none;
+            padding: 20px;
+        }
+        .cartMenos{
+            display:flex;
+            color: white;
+            background-color: rgb(235, 70, 70);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .cartMas{
+            display:flex;   
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+            background-color: rgb(136, 235, 70);
+        }
+    }
+
+    .finalPrice{
+        border: none;
+        border-bottom: 8px solid rgba(243, 108, 108, 0.5);
+        font-size: 30px;
+    }
+    .btnFinalCompra{
+        border: none;
+        button{
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(0, 132, 255);
+            border-radius: 6px;
+            color: white;
+            transition: all 0.5s;
+            &:hover{
+                background-color: rgb(108, 183, 253);
+            }
+        }
+    }
+
+}
