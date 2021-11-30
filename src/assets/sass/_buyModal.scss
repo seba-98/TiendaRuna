@@ -1,0 +1,80 @@
+.buyModal, .buyInfo, .itemsModalContent, .closeButtonContent, .buyItem{
+    display: flex;
+}
+
+.buyModal{
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(93, 93, 93, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+
+    .buyDescription{
+        font-size: 20px;
+        margin: 20px;
+    }
+    
+
+    .buyInfo{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+        height: 80%;
+        width: 60%;
+        margin-top: 20px;
+        
+    }
+    .closeButtonContent{
+        width: 100%;
+        justify-content: end;
+
+        button{
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(241, 62, 62);
+            font-weight: bold;
+            color: white;
+            transition: all 0.5s;
+            &:hover{
+                background-color: rgb(255, 0, 0);
+            }
+        }
+    }
+    .itemsModalContent{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .buyItem{
+        flex-wrap: wrap;
+        border: 4px solid rgba(193,144,51, 0.3);
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sendButton{
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: rgb(44, 140, 250);
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: all 0.5s;
+        &:hover{
+            background-color: rgb(116, 173, 240);
+        }
+    }
+}
+
+@media(max-width: 779px){
+    .buyInfo{width: 90% !important;}
+}

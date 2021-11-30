@@ -101,7 +101,6 @@ const ItemDetail = () => {
         }
     }
 
-   
 
     return (
         <div className='detailContent'>

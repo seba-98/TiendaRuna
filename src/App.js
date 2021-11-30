@@ -8,6 +8,7 @@ import Overlay from "./components/pagesComponents/overlay/Overlay";
 import Admin from "./components/pages/admin/index";
 import ItemDetail from "./components/pages/itemDetail/index";
 import Cart from "./components/pages/cart";
+import BuyForm from "./components/pages/buyForm";
 import { useState } from "react";
 import { CartProvider } from './CartContext'
 
@@ -26,6 +27,7 @@ function App() {
               <Route  path="home/admin" exact element={<Admin/>}/>
               <Route  path="/itemDetail/:id" exact element={<ItemDetail/>}/>
               <Route  path="/cart" exact element={<Cart/>}/>
+              <Route  path="/buyForm" exact element={<BuyForm/>}/>
           </Routes>
           {openOver === true && <Overlay over={(e)=>{setOpenOver(e)}}/>}
         <Footer />
