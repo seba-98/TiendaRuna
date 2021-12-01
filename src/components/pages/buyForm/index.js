@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import BackButtom from '../../pagesComponents/backButtom/BackButtom';
 import BuyModal from '../../pagesComponents/buyModal/BuyModal';
 import { cartContext } from '../../../CartContext';
 
@@ -67,6 +68,10 @@ const BuyForm = () => {
         <div className='formContent'>
             {set() !==0 ?
             <>
+            <div className='contentTitleBuyForm'>
+                <BackButtom nav='/cart'/>
+                <h3 style={{fontSize:'25px', color:'black'}}>Formulario de compra</h3>
+            </div>
                 <form action="" onSubmit={formik.handleSubmit} className='buyForm'>
                 {openModal === true && <BuyModal data={sellData} modal={(e)=>{setOpenModal(e)}}/>}
                     <section className='inputContainer' >

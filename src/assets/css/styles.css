@@ -293,7 +293,8 @@ li:hover .ulFilter {
     width: 100%;
     text-align: center; }
   .formContainer nav {
-    border: 3px solid #B87800;
+    border: 8px solid rgba(193, 144, 51, 0.6);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     width: 50%; }
@@ -302,10 +303,12 @@ li:hover .ulFilter {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 0%;
       height: 100%;
       width: 100%;
       margin: 0; }
       .formContainer nav ul li {
+        text-align: center;
         padding: 10px;
         font-size: 17px;
         font-weight: bold;
@@ -314,7 +317,7 @@ li:hover .ulFilter {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 7px solid rgba(193, 144, 51, 0.5);
+    border: 7px solid rgba(193, 144, 51, 0.4);
     border-radius: 50px;
     padding: 0 60px 0 60px;
     margin: 30px 0 30px 0;
@@ -325,14 +328,14 @@ li:hover .ulFilter {
       align-items: center;
       justify-content: center;
       margin: 15px 0 5px 0; }
-      .formContainer .loginForm .loginGroup .place {
+      .formContainer .loginForm .loginGroup .places {
         width: 80%;
         height: 55px;
         padding: 5px;
         border: 1px solid #bdbdbd;
         border-radius: 6px;
         transition: all 0.2s; }
-        .formContainer .loginForm .loginGroup .place:hover {
+        .formContainer .loginForm .loginGroup .places:hover {
           box-shadow: 1px 1px 10px #478dff; }
       .formContainer .loginForm .loginGroup .subYes {
         padding: 15px;
@@ -345,11 +348,24 @@ li:hover .ulFilter {
         .formContainer .loginForm .loginGroup .subYes:hover {
           box-shadow: 1px 1px 10px #478dff; }
 
+.contentAddButton {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 30px 0;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .contentAddButton h3 {
+    margin: 20px 0 20px 0;
+    width: 80%; }
+
 form {
+  width: 70%;
   padding: 60px 0 60px 0; }
   form .formGroup {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 8px; }
   form .subyesContainer {
     display: flex;
@@ -374,23 +390,38 @@ form {
     .loginForm .place {
       width: 100% !important; } }
 
+@media (max-width: 400px) {
+  h2, h3 {
+    font-size: 20px !important; }
+  .places {
+    font-size: 16px !important;
+    max-width: 170px; } }
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
 
-.detailContent, .itemImages, .itemDescription, .itemPrice, .buttonContainer, .itemButtons {
+.detailContent, .itemImages, .itemDescription, .itemPrice, .buttonContainer, .itemButtons, .detailButtonContent {
   display: flex; }
 
 .detailContent {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: auto; }
-  .detailContent h2 {
-    margin: 50px 0 50px 0; }
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+  .detailContent .detailButtonContent {
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0%;
+    justify-content: space-evenly; }
+    .detailContent .detailButtonContent h2 {
+      margin: 30px 0 30px 0;
+      width: 40%; }
 
 .itemImages {
   justify-content: center;
@@ -403,7 +434,7 @@ form {
     height: 400px; }
 
 .itemDescription {
-  width: 100%;
+  width: 80%;
   font-size: 20px;
   font-weight: bold;
   color: #4d4d4d;
@@ -420,7 +451,7 @@ form {
 .itemButtons {
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 60%;
   margin: 50px 0 50px 0;
   flex-direction: column;
   font-size: 20px;
@@ -444,6 +475,21 @@ form {
     color: white;
     background-color: #88eb46; }
 
+@media (max-width: 800px) {
+  .itemImages {
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    flex-wrap: wrap; }
+    .itemImages img {
+      border-radius: 23px;
+      width: 300px; }
+  .detailButtonContent {
+    width: 300px !important;
+    justify-content: space-around; }
+    .detailButtonContent h2 {
+      width: 80% !important; } }
+
 .cartContainer {
   height: auto;
   min-height: 600px;
@@ -451,7 +497,7 @@ form {
   list-style: none;
   padding: 0%; }
   .cartContainer h3 {
-    width: 100%;
+    width: 60%;
     text-align: center;
     margin-top: 50px; }
   .cartContainer li {
@@ -533,8 +579,18 @@ form {
       .cartContainer .btnFinal .btnVaciar:hover {
         background-color: red; }
 
-.buyForm, .formContent, .inputContainer, .buyFormGroup {
+.buyForm, .formContent, .inputContainer, .buyFormGroup, .contentTitleBuyForm {
   display: flex; }
+
+.contentTitleBuyForm {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly; }
+  .contentTitleBuyForm h3 {
+    width: 70%;
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 35px !important; }
 
 .formContent {
   justify-content: center;
@@ -648,11 +704,17 @@ form {
   .buyInfo {
     width: 90% !important; } }
 
-.sellUl, .sell {
+.sellUl, .sell, .contentButton {
   display: flex; }
 
-.sellTitle {
-  margin: 40px 0 20px 0; }
+.contentButton {
+  margin: 30px 0 30px 0;
+  width: 60%;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .contentButton .sellTitle {
+    margin: 40px 0 20px 0;
+    width: 80%; }
 
 .sellUl {
   width: 100%;
@@ -660,7 +722,7 @@ form {
   flex-direction: column;
   align-items: center; }
   .sellUl .sell {
-    justify-content: center !important;
+    justify-content: center;
     margin: 30px 0 30px 0;
     flex-direction: row;
     flex-wrap: wrap;
@@ -687,12 +749,36 @@ form {
       color: white;
       border-radius: 10px; }
 
+.sellItemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid rgba(193, 144, 51, 0.2);
+  border-radius: 20px;
+  width: 80%; }
+  .sellItemContent .sellItemData h3 {
+    font-size: 40px; }
+  .sellItemContent .sellItemData p {
+    color: #5a5a5a;
+    font-size: 25px;
+    font-weight: bold; }
+
 @media (max-width: 960px) {
   .sell {
     width: 100% !important; }
     .sell p, .sell h3 {
       width: 100% !important;
       text-align: center; } }
+
+@media (max-width: 650px) {
+  .sellItemContent {
+    width: 100% !important; }
+    .sellItemContent .sellItemData h3 {
+      font-size: 20px !important; }
+    .sellItemContent .sellItemData p {
+      color: #5a5a5a;
+      font-size: 16px !important;
+      font-weight: bold; } }
 
 .backButtom {
   background-color: white;

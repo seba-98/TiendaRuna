@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { db } from '../../../firebaseConfig';
 import { getDoc, doc} from '@firebase/firestore';
 import { cartContext } from '../../../CartContext';
+import BackButtom from '../../pagesComponents/backButtom/BackButtom';
 
 
 
@@ -105,7 +106,10 @@ const ItemDetail = () => {
     return (
         <div className='detailContent'>
 
+            <div className='detailButtonContent'>
+                <BackButtom nav={`/home/products/${article.category}`}/>
                 <h2>{article.name}</h2>
+            </div>
             <div className="itemImages">
                 <img src={article.image1} alt="" /> {article.image2 ? <img src={article.image2} alt=""  /> : null} 
             </div>

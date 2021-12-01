@@ -50,7 +50,7 @@ const Category = () => {
         {allCategory === false ? (
           <div className='categoryList'>
             <div >
-              <Link to={`/home/products/${"SahuHierbas"}`}  state={{img:sahuHerb}}>
+              <Link to={`/home/products/${"sahuhierbas"}`}  state={{img:sahuHerb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
@@ -60,7 +60,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"SahuPolvo"}`} state={{img:sahuPolv}}>
+              <Link to={`/home/products/${"sahupolvo"}`} state={{img:sahuPolv}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Polvos para sahumar</span>
@@ -70,7 +70,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Palosanto"}`} state={{img:santo}}>
+              <Link to={`/home/products/${"palosanto"}`} state={{img:santo}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Palo santo</span>
@@ -80,7 +80,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Hierbas"}`} state={{img:herb}}>
+              <Link to={`/home/products/${"hierbas"}`} state={{img:herb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
@@ -93,7 +93,7 @@ const Category = () => {
         ) : (
           <div className='categoryList'>
            <div>
-              <Link to={`/home/products/${"SahuHierbas"}`} state={{img:sahuHerb}}>
+              <Link to={`/home/products/${"sahuhierbas"}`} state={{img:sahuHerb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
@@ -103,7 +103,7 @@ const Category = () => {
               </Link>
             </div>
             <div >
-              <Link to={`/home/products/${"SahuPolvo"}`} state={{img:sahuPolv}}>
+              <Link to={`/home/products/${"sahupolvo"}`} state={{img:sahuPolv}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Polvos para sahumar</span>
@@ -113,7 +113,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Palosanto"}`} state={{img:santo}}>
+              <Link to={`/home/products/${"palosanto"}`} state={{img:santo}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Palo santo</span>
@@ -123,7 +123,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Hierbas"}`} state={{img:herb}}>
+              <Link to={`/home/products/${"hierbas"}`} state={{img:herb}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
@@ -133,7 +133,7 @@ const Category = () => {
               </Link>
             </div>
             <div >
-              <Link to={`/home/products/${"SahuResinas"}`} state={{img:sahuRes}}>
+              <Link to={`/home/products/${"sahuresinas"}`} state={{img:sahuRes}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Resinas para sahumar</span>
@@ -143,7 +143,7 @@ const Category = () => {
               </Link>
             </div>
             <div >
-              <Link to={`/home/products/${"SahuNat"}`} state={{img:sahuNat}}>
+              <Link to={`/home/products/${"sahunat"}`} state={{img:sahuNat}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumos naturales: blends de hierbas y resinas</span>
@@ -153,7 +153,7 @@ const Category = () => {
               </Link>
             </div>
             <div >
-              <Link to={`/home/products/${"SagMadre"}`} state={{img:sagMadre}}>
+              <Link to={`/home/products/${"sagmadre"}`} state={{img:sagMadre}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Linea sagrada madre</span>
@@ -163,7 +163,7 @@ const Category = () => {
               </Link>
             </div>
             <div >
-              <Link to={`/home/products/${"Satyaygoloka"}`} state={{img:sahu}}>
+              <Link to={`/home/products/${"satyaygoloka"}`} state={{img:sahu}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios SATYA Y GOLOKA</span>
@@ -173,7 +173,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"TribalSoul"}`} state={{img:cono}}>
+              <Link to={`/home/products/${"tribalsoul"}`} state={{img:cono}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios y conitos TRIBAL SOUL INDIA</span>
@@ -183,7 +183,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"SreeVani"}`} state={{img:sahu}}>
+              <Link to={`/home/products/${"sreevani"}`} state={{img:sahu}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumerios india Sree vani y Sandesh</span>
@@ -193,7 +193,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Aquas"}`} state={{img:aqua}}>
+              <Link to={`/home/products/${"aquas"}`} state={{img:aqua}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Aguas florida y colonias MyL</span>
@@ -203,7 +203,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Carbon"}`} state={{img:carbon}}>
+              <Link to={`/home/products/${"carbon"}`} state={{img:carbon}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Carbones</span>
@@ -213,7 +213,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"MatYoga"}`} state={{img:mat}}>
+              <Link to={`/home/products/${"matyoga"}`} state={{img:mat}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Mat de yoga</span>
@@ -223,7 +223,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Tarot"}`} state={{img:tarot}}>
+              <Link to={`/home/products/${"tarot"}`} state={{img:tarot}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Tarot, cartas, oraculos y runas vikingas</span>
@@ -233,7 +233,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Aguayos"}`} state={{img:aguayos}}>
+              <Link to={`/home/products/${"aguayos"}`} state={{img:aguayos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Aguayos</span>
@@ -243,7 +243,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Sahumadores"}`} state={{img:sahumadores}}>
+              <Link to={`/home/products/${"sahumadores"}`} state={{img:sahumadores}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumadores</span>
@@ -253,7 +253,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Difusores"}`} state={{img:difusores}}>
+              <Link to={`/home/products/${"difusores"}`} state={{img:difusores}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Difusores y aromatizantes</span>
@@ -263,7 +263,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Sahumos"}`} state={{img:sahumos}}>
+              <Link to={`/home/products/${"sahumos"}`} state={{img:sahumos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Sahumos</span>
@@ -273,7 +273,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Velas"}`} state={{img:velas}}>
+              <Link to={`/home/products/${"velas"}`} state={{img:velas}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Escencias y velas</span>
@@ -283,7 +283,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Cannabic"}`} state={{img:cannabic}}>
+              <Link to={`/home/products/${"cannabic"}`} state={{img:cannabic}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Medicina cannabica</span>
@@ -293,7 +293,7 @@ const Category = () => {
               </Link>
             </div>
             <div>
-              <Link to={`/home/products/${"Frutos"}`}  state={{img:frutos}}>
+              <Link to={`/home/products/${"frutos"}`}  state={{img:frutos}}>
                 <div className=" position-relative ">
                   <div className="middle-text">
                     <span>Frutos secos</span>

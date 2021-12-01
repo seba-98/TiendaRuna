@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { doc, updateDoc, getDoc } from '@firebase/firestore';
 import { db, app } from '../../../../firebaseConfig';
+import BackButtom from '../../backButtom/BackButtom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
 import swal from 'sweetalert';
@@ -164,8 +165,10 @@ const Update = () => {
 
     return (
             <form action="" onSubmit={formik.handleSubmit}>
-
-                <h3 style={{fontSize:'25px', color:'black'}}>Actualizar producto</h3>
+                 <div className='contentAddButton'>
+                    <BackButtom nav='/home'/>
+                    <h3 style={{fontSize:'25px', color:'black'}}>Actualizar producto</h3>
+                 </div>
                 <div className="formGroup">
                     <label htmlFor="">ID del producto</label>
                     <input type="text" name="id" id=""className='places' onChange={(e) => {setId(e.target.value)}} value={id}/><button onClick={(e)=>{search(e)}}>Buscar</button>

@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import { addDoc, collection} from '@firebase/firestore';
 import { db, app } from '../../../../firebaseConfig';
 import swal from 'sweetalert';
-
+import BackButtom from '../../backButtom/BackButtom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+
 
 
 const Add = () => {
@@ -129,8 +130,10 @@ const Add = () => {
     return (
             <form action="" onSubmit={formik.handleSubmit}>
             
+            <div className='contentAddButton'>
+                <BackButtom nav='/home'/>
                 <h3 style={{fontSize:'25px', color:'black'}}>Añadir producto</h3>
-
+            </div>
                 <div className="formGroup">
                     <label htmlFor="">Imagenes</label>
                     <input type="file" name=""  multiple onChange={(e)=>{loadImg(e)}}/>

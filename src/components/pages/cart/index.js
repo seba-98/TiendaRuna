@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { cartContext } from '../../../CartContext';
 import swal from 'sweetalert';
+import BackButtom from '../../pagesComponents/backButtom/BackButtom';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
@@ -55,7 +56,10 @@ const Cart = () => {
 
     return (
         <ul className='cartContainer'>
-            <h3>Carrito de compras</h3>
+            <div className='contentAddButton'>
+                    <BackButtom nav='/home'/>
+                    <h3 style={{fontSize:'25px', color:'black'}}>Remover producto</h3>
+            </div>
 
             {carrito && carrito.length > 0 ? carrito.map((item, idx)=>{
 

@@ -1,55 +1,75 @@
 
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Banner from '../../pagesComponents/banner/Banner'
-import img1 from '../../../assets/img/bannerCategoria.png'
-import img2 from '../../../assets/img/sahumerios.png'
+import defaultImg from  '../../../assets/img/banner.png'
+import BackButtom from '../../pagesComponents/backButtom/BackButtom'
 import { useParams } from 'react-router'
 import { db } from '../../../firebaseConfig'
 import { collection, getDocs, query, where } from '@firebase/firestore'
 
+import aqua from '../../pagesComponents/category/categoryImg/aqua.jpg'
+import herb from '../../pagesComponents/category/categoryImg/herb.jpg'
+import sahu from '../../pagesComponents/category/categoryImg/sahu.jpg'
+import aguayos from '../../pagesComponents/category/categoryImg/aguayos.jpg'
+import cannabic from '../../pagesComponents/category/categoryImg/cannabic.jpg'
+import carbon from '../../pagesComponents/category/categoryImg/carbon.jpg'
+import cono from '../../pagesComponents/category/categoryImg/cono.jpg'
+import difusores from '../../pagesComponents/category/categoryImg/difusores.jpg'
+import frutos from '../../pagesComponents/category/categoryImg/frutos.jpg'
+import mat from '../../pagesComponents/category/categoryImg/matYog.jpg'
+import santo from '../../pagesComponents/category/categoryImg/paloSanto.jpg'
+import sahumadores from '../../pagesComponents/category/categoryImg/sahumadores.jpg'
+import sahuPolv from '../../pagesComponents/category/categoryImg/sahuPolv.jpg'
+import sahuRes from '../../pagesComponents/category/categoryImg/sahuRes.jpg'
+import sahuHerb from '../../pagesComponents/category/categoryImg/sahuHerb.jpg'
+import sahuNat from '../../pagesComponents/category/categoryImg/sahuNat.jpg'
+import tarot from '../../pagesComponents/category/categoryImg/tarot.jpg'
+import velas from '../../pagesComponents/category/categoryImg/velas.jpg'
+import sagMadre from '../../pagesComponents/category/categoryImg/sagMadre.jpg'
+import sahumos from '../../pagesComponents/category/categoryImg/sahumos.jpg'
+
 
 const Products =()=> {
 
-	
-	const { img } = useLocation().state;
 
-	const{id} = useParams()
+	const{id=id.toLowerCase()} = useParams()
 	const[h2, setH2]=useState('')
 
 	const [products, setProducts] = useState([]);
+	const [img, setImg] = useState(defaultImg);
 
 	const setData= async ()=>{
 
-		if(id=== 'Velas'){setH2('Escencias y velas')}
-		else if(id === 'SahuHierbas'){setH2('Hierbas para sahumar')}
-		else if(id === 'SahuPolvo'){setH2('Polvos para sahumar')}
-		else if(id === 'SahuResinas'){setH2('Resinas para sahumar')}
-		else if(id === 'SahuNat'){setH2('Sahumos naturales: blends de hierbas y resinas')}
-		else if(id === 'Sahumadores'){setH2('Sahumadores, copaleras y portasahumerios')}
-		else if(id === 'Hierbas'){setH2('Hierbas medicinales, infusiones y té en hebras')}
-		else if(id === 'SagMadre'){setH2('Linea sagrada madre')}
-		else if(id === 'Satyaygoloka'){setH2('Sahumerios SATYA Y GOLOKA')}
-		else if(id === 'TribalSoul'){setH2('Sahumerios y conitos TRIBAL SOUL INDIA')}
-		else if(id === 'SreeVani'){setH2('Sahumerios india Sree vani y Sandesh')}
-		else if(id === 'Aquas'){setH2('Aguas florida y colonias Muray y Lanman original')}
-		else if(id === 'Aguayos'){setH2('Aguayos')}
-		else if(id === 'Carbon'){setH2('Carbones')}
-		else if(id === 'MatYoga'){setH2('Mat de yoga')}
-		else if(id === 'Tarot'){setH2('Tarot, cartas, oráculos y runas vikingas')}
-		else if(id === 'Palosanto'){setH2('Palo santo')}
-		else if(id === 'Difusores'){setH2('Difusores y aromatizantes')}
-		else if(id === 'Sahumos'){setH2('Sahumos')}
-		else if(id === 'Cannabic'){setH2('Medicina cannabica natural')}
-		else if(id === 'Frutos'){setH2('Frutos secos')}
+		if(id=== 'Velas'){setH2('Escencias y velas'); setImg(velas)}
+		else if(id === 'sahuhierbas'){setH2('Hierbas para sahumar'); setImg(sahuHerb)}
+		else if(id === 'sahupolvo'){setH2('Polvos para sahumar'); setImg(sahuPolv)}
+		else if(id === 'sahuresinas'){setH2('Resinas para sahumar'); setImg(sahuRes)}
+		else if(id === 'sahunat'){setH2('Sahumos naturales: blends de hierbas y resinas'); setImg(sahuNat)}
+		else if(id === 'sahumadores'){setH2('Sahumadores, copaleras y portasahumerios'); setImg(sahumadores)}
+		else if(id === 'hierbas'){setH2('Hierbas medicinales, infusiones y té en hebras'); setImg(herb)}
+		else if(id === 'sagmadre'){setH2('Linea sagrada madre'); setImg(sagMadre)}
+		else if(id === 'satyaygoloka'){setH2('Sahumerios SATYA Y GOLOKA'); setImg(sahu)}
+		else if(id === 'tribalsoul'){setH2('Sahumerios y conitos TRIBAL SOUL INDIA'); setImg(cono)}
+		else if(id === 'sreevani'){setH2('Sahumerios india Sree vani y Sandesh'); setImg(sahu)}
+		else if(id === 'aquas'){setH2('Aguas florida y colonias Muray y Lanman original'); setImg(aqua)}
+		else if(id === 'aguayos'){setH2('Aguayos'); setImg(aguayos)}
+		else if(id === 'carbon'){setH2('Carbones'); setImg(carbon)}
+		else if(id === 'matyoga'){setH2('Mat de yoga'); setImg(mat)}
+		else if(id === 'tarot'){setH2('Tarot, cartas, oráculos y runas vikingas'); setImg(tarot)}
+		else if(id === 'palosanto'){setH2('Palo santo'); setImg(santo)}
+		else if(id === 'difusores'){setH2('Difusores y aromatizantes'); setImg(difusores)}
+		else if(id === 'sahumos'){setH2('Sahumos'); setImg(sahumos)}
+		else if(id === 'cannabic'){setH2('Medicina cannabica natural'); setImg(cannabic)}
+		else if(id === 'frutos'){setH2('Frutos secos'); setImg(frutos)}
 
 		const arr=[];
-			const ref= query(collection(db, 'products'), where("category", "==",  id.toLowerCase()));
-			const data= await getDocs(ref);
-
-			data.forEach(product=>{
-				arr.push({...product.data(), id: product.id})
-			})
+		const ref= query(collection(db, 'products'), where("category", "==",  id.toLowerCase()));
+		const data= await getDocs(ref);
+		
+		data.forEach(product=>{
+			arr.push({...product.data(), id: product.id})
+		})
 
 			setProducts(arr)
 	}
@@ -63,6 +83,7 @@ const Products =()=> {
             <Banner  height='500px' img={img}  h2={h2} dis='none'/>
 
 	   <section class="productos-section w-100">
+						<BackButtom style={{backgroundColor:'rgb(206,165,93)'}} nav='/home'/>
 			<div class="container productos-container">
 
 				<div class="row ">

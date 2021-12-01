@@ -24,9 +24,10 @@ const Sells = () => {
 
     return (
         <>
-        <BackButtom style={{position:'relative', right:'200px'}}/>
-        
+        <div className='contentButton'>
+            <BackButtom render={(e)=>{setSellData(e)}} nav={sellData !== true ? null : '/home'}/>
             <h3 className='sellTitle'>{sellData !==true ? 'Gestión de ventas' : 'Información de venta'}</h3>
+        </div>
 
             {sellData ===true ?
             <ul className='sellUl'>

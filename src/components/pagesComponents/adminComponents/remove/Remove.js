@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getDocs, deleteDoc, collection, doc,  } from '@firebase/firestore';
 import { db } from '../../../../firebaseConfig';
+import BackButtom from '../../backButtom/BackButtom';
 import Preload from '../../../widgets/preload/Preload'
 import swal from 'sweetalert';
 
@@ -37,8 +38,11 @@ const Remove = () => {
     return (
 
         
-             <form action="">
-                <h3 style={{fontSize:'25px', color:'black'}}>Remover productos</h3>
+             <form action="" >
+                <div className='contentAddButton'>
+                    <BackButtom nav='/home'/>
+                    <h3 style={{fontSize:'25px', color:'black'}}>Remover producto</h3>
+                </div>
                     <div className='ulDelete'>
                         {products && products.map((Item, idx)=>{
                             return (
