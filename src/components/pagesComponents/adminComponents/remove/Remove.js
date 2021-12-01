@@ -51,7 +51,6 @@ const Remove = () => {
                                         <button className='buttonDelete' onClick={(e)=>{remove(e, Item.id)}}>Eliminar</button>
                                     </>  
                                     }
-                                        
                                 </div>
                             )
                         })} 

@@ -648,6 +648,63 @@ form {
   .buyInfo {
     width: 90% !important; } }
 
+.sellUl, .sell {
+  display: flex; }
+
+.sellTitle {
+  margin: 40px 0 20px 0; }
+
+.sellUl {
+  width: 100%;
+  padding: 0%;
+  flex-direction: column;
+  align-items: center; }
+  .sellUl .sell {
+    justify-content: center !important;
+    margin: 30px 0 30px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 40px 0 40px 0;
+    border: 6px solid rgba(159, 195, 253, 0.5);
+    border-radius: 20px; }
+    .sellUl .sell h3 {
+      width: 40%; }
+    .sellUl .sell p {
+      width: 40%;
+      font-size: 20px; }
+    .sellUl .sell button {
+      margin: 3px;
+      padding: 15px; }
+    .sellUl .sell .delSell {
+      background-color: #ff5d5d;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px; }
+    .sellUl .sell .viewSell {
+      background-color: #3fa5f8;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px; }
+
+@media (max-width: 960px) {
+  .sell {
+    width: 100% !important; }
+    .sell p, .sell h3 {
+      width: 100% !important;
+      text-align: center; } }
+
+.backButtom {
+  background-color: white;
+  font-size: 70px;
+  border-radius: 50%;
+  padding: 3px 10px 3px 10px;
+  border: 5px solid #3d3d3d;
+  color: #3d3d3d; }
+  .backButtom:hover {
+    border: 5px solid #c19033;
+    color: #c19033; }
+
 button {
   border: none;
   background-color: none; }
