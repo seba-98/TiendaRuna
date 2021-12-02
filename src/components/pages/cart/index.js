@@ -58,7 +58,7 @@ const Cart = () => {
         <ul className='cartContainer'>
             <div className='contentAddButton'>
                     <BackButtom nav='/home'/>
-                    <h3 style={{fontSize:'25px', color:'black'}}>Remover producto</h3>
+                    <h3 style={{fontSize:'25px', color:'black'}}>Carrito de compras</h3>
             </div>
 
             {carrito && carrito.length > 0 ? carrito.map((item, idx)=>{

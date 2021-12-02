@@ -3,25 +3,73 @@
 	background-color: #C19033;
 }
 .productos-container
-{
+{	
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
 	background-color: #DEC493;
+	min-height: 600px !important;
+}
+.productsSubContainer{
+	display: flex;
+	justify-content: center;
+	width:100%;
+	flex-wrap: wrap;
+	.product{
+		display: flex;
+		align-items: center;
+		width: 25%;
+		margin: 50px 0 50px 0;
+		
+		.subProduct{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-height: 500px;
+			width: 100%;
+			.productImgContainer{
+
+				img{
+					width: 200px ;
+					height: 200px;
+					border-radius: 10px;
+				}
+				height: 250px;
+			}
+
+			.product-detail{
+				margin: 30px 0 30px 0;
+			}
+		}
+	}
 }
 
 .categorySelection{
+	
 	li{
+		padding: 0;
 		.ulFilter{
 			position: absolute;
+			z-index: 1;
 			display: none;
-			right: 320px;
-
+			width: 300px;
+			right: 170px;
+			height: 600px;
+			overflow-y: scroll;
+			background-color: rgba(193,144,51, 0.6);
+			border-radius: 10px;
 			li{
-				padding: 5px;
-				margin: 2px;
-				background-color: #C19033;
+				padding:0;
+				margin: 8px 10px 8px 0;
+				background-color: rgba(193,144,51, 0.0);
 				border-radius: 5px;
 				color: rgb(68, 68, 68);
 				font-size: 17px;
 				font-weight: 600;
+				transition: all 0.3s;
+				&:hover{
+					border: 2px solid rgb(68, 68, 68);
+					background-color: white;
+				}
 			}
 		}
 	}
@@ -29,5 +77,23 @@
 li:hover{
 	.ulFilter{
 		display: block;
+	}
+}
+
+@media(max-width:1000px){
+	.product{
+		width: 250px !important;
+		margin: 30px 0 30px 0;
+		.subProduct{
+			height: 350px !important;
+		}
+	}
+
+}
+@media(max-width:680px){
+	
+	.ulFilter{
+		right: 50px !important;
+		height: 500px !important;
 	}
 }

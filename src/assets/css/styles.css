@@ -123,18 +123,16 @@
   z-index: 100;
   border-top-right-radius: 28px;
   border-bottom-right-radius: 28px; }
-  .sidebar-wrapper li a {
+  .sidebar-wrapper li {
+    cursor: pointer;
+    overflow: hidden;
     transition: all 420ms; }
-    .sidebar-wrapper li a:hover {
+    .sidebar-wrapper li:hover {
       color: #C97721; }
 
 .arrow-wrapper {
   position: absolute;
   right: 110px; }
-
-.submenu {
-  cursor: pointer;
-  overflow: hidden; }
 
 .cross-wrapper {
   margin-left: 88%;
@@ -260,29 +258,82 @@ ul {
   padding-left: 45%;
   line-height: 80px;
   font-size: 31px;
-  color: #fff; }
+  color: #fff;
+  background-color: rgba(243, 49, 49, 0.4); }
 
 .productos-section {
   background-color: #C19033; }
 
 .productos-container {
-  background-color: #DEC493; }
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #DEC493;
+  min-height: 600px !important; }
 
-.categorySelection li .ulFilter {
-  position: absolute;
-  display: none;
-  right: 320px; }
-  .categorySelection li .ulFilter li {
-    padding: 5px;
-    margin: 2px;
-    background-color: #C19033;
-    border-radius: 5px;
-    color: #444444;
-    font-size: 17px;
-    font-weight: 600; }
+.productsSubContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap; }
+  .productsSubContainer .product {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin: 50px 0 50px 0; }
+    .productsSubContainer .product .subProduct {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 500px;
+      width: 100%; }
+      .productsSubContainer .product .subProduct .productImgContainer {
+        height: 250px; }
+        .productsSubContainer .product .subProduct .productImgContainer img {
+          width: 200px;
+          height: 200px;
+          border-radius: 10px; }
+      .productsSubContainer .product .subProduct .product-detail {
+        margin: 30px 0 30px 0; }
+
+.categorySelection li {
+  padding: 0; }
+  .categorySelection li .ulFilter {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 300px;
+    right: 170px;
+    height: 600px;
+    overflow-y: scroll;
+    background-color: rgba(193, 144, 51, 0.6);
+    border-radius: 10px; }
+    .categorySelection li .ulFilter li {
+      padding: 0;
+      margin: 8px 10px 8px 0;
+      background-color: rgba(193, 144, 51, 0);
+      border-radius: 5px;
+      color: #444444;
+      font-size: 17px;
+      font-weight: 600;
+      transition: all 0.3s; }
+      .categorySelection li .ulFilter li:hover {
+        border: 2px solid #444444;
+        background-color: white; }
 
 li:hover .ulFilter {
   display: block; }
+
+@media (max-width: 1000px) {
+  .product {
+    width: 250px !important;
+    margin: 30px 0 30px 0; }
+    .product .subProduct {
+      height: 350px !important; } }
+
+@media (max-width: 680px) {
+  .ulFilter {
+    right: 50px !important;
+    height: 500px !important; } }
 
 .formContainer {
   display: flex;
@@ -328,14 +379,14 @@ li:hover .ulFilter {
       align-items: center;
       justify-content: center;
       margin: 15px 0 5px 0; }
-      .formContainer .loginForm .loginGroup .places {
+      .formContainer .loginForm .loginGroup .places, .formContainer .loginForm .loginGroup .place {
         width: 80%;
         height: 55px;
         padding: 5px;
         border: 1px solid #bdbdbd;
         border-radius: 6px;
         transition: all 0.2s; }
-        .formContainer .loginForm .loginGroup .places:hover {
+        .formContainer .loginForm .loginGroup .places:hover, .formContainer .loginForm .loginGroup .place:hover {
           box-shadow: 1px 1px 10px #478dff; }
       .formContainer .loginForm .loginGroup .subYes {
         padding: 15px;

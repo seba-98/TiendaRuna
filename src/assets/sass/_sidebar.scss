@@ -12,15 +12,14 @@
 
     li 
     {
-        
-        a 
-        {
+        cursor: pointer;
+        overflow: hidden;
             transition: all 420ms;
             &:hover
             {
                 color: #C97721;
             }
-        }
+        
     }
 }
 .arrow-wrapper
@@ -28,11 +27,7 @@
     position:  absolute;
     right: 110px;
 }
-.submenu
-{
-    cursor: pointer;
-    overflow: hidden;
-}
+
 .cross-wrapper
 {
     margin-left: 88%;

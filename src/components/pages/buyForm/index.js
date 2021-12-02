@@ -97,7 +97,7 @@ const BuyForm = () => {
                         </div>
                         <div className='buyFormGroup'>
                             <label htmlFor="">Email</label>
-                            <input type="email" name="email" id="" onChange={formik.handleChange} tyle={formik.errors.email && styleInputErr} />
+                            <input type="email" name="email" id="" onChange={formik.handleChange} style={formik.errors.email && styleInputErr} />
                             {formik.errors.email && <label style={styleTextErr}>{formik.errors.email}</label>}
                         </div>
                         <div className='buyFormGroup'>
