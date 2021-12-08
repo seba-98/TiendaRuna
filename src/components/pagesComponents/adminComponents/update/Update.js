@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { doc, updateDoc, getDoc } from '@firebase/firestore';
-import { db, app } from '../../../../firebaseConfig';
+import { db } from '../../../../firebaseConfig';
+import { LoadImg } from '../../../../helpers/loadImg';
 import BackButtom from '../../backButtom/BackButtom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
@@ -11,8 +12,10 @@ const Update = () => {
         initialValues:{
             category:'',
             name:'',
+            offer:true,
             info:'',
-            price:''
+            price:'',
+            oldPrice:''
         },
         onSubmit:(data, {resetForm})=>{
            
@@ -30,9 +33,11 @@ const Update = () => {
     },
         validationSchema: Yup.object({
             category: Yup.string('Ingrese categoria').required('Campo requerido'),
+            offer: Yup.string('Debe elegir una opción').required('Campo requerido'),
             name: Yup.string('Ingrese nombre').required('Campo requerido'),
             info: Yup.string('Ingrese características').required('Campo requerido'),
-            price: Yup.number('Ingrese precio').required('Campo requerido')
+            price: Yup.number('Ingrese precio').required('Campo requerido'),
+            oldPrice: Yup.number('Ingrese precio').required('Campo requerido')
         })
     })
 
@@ -40,89 +45,32 @@ const Update = () => {
     const [id, setId]= useState('');
     const[image1, setImage1]= useState('');
     const[image2, setImage2]= useState('');
+    const[loadingImg, setLoadingImg]= useState(false);
     const[updateProduct, setUpdateProduct] = useState(false)
 
 
     const product ={
         category:formik.values.category.toLowerCase(),
-        image1: image1,
-        image2: image2,
+        image1: image1.trim(),
+        image2: image2 ? image2.trim() : null,
+        offer: formik.values.offer,
         info: formik.values.info.trim(),
         name: formik.values.name.trim(),
+        oldPrice:formik.values.oldPrice,
         price: formik.values.price,
     }
 
 
     const saveImages= async (e) =>{
         const file1 = e.target.files[0];
-           const file2 = e.target.files[1];
-           const storageRef = app.storage().ref();
+        const file2 = e.target.files[1];
+        setLoadingImg(true)
 
-           console.log(e.target.files)
-           
-           if(file1 && !file2 &&  ( file1.type !=='image/jpeg' &&  file1.type !=='image/png' && file1.type !=='image/jpg')){
-
-            swal({
-                title: "Error al subir",
-                text: 'formatos admitidos(.jpg, .png, .jpeg)',
-                icon: "warning",
-                });
-
-           }
-           else if(file1 && file2 && ((file1.type !== 'image/jpeg' && file1.type !== 'image/png'&&  file1.type !== 'image/jpg') || ( file2.type !=='image/jpeg' && file2.type !=='image/png' && file2.type !=='image/jpg'))) {
-            swal({
-                title: "Error al subir",
-                text: 'formatos admitidos(.jpg, .png, .jpeg)',
-                icon: "warning",
-                });
-           }
-           else if(file1 && !file2 && (file1.type === 'image/jpeg' || file1.type === 'image/png'|| file1.type === 'image/jpg')){
-
-            const storagePath = storageRef.child(file1.name);
-            try{
-                const enviar= await storagePath.put(file1)
-                console.log(enviar)
-                 swal({
-                    title: "Imagen subida a la base de datos",
-                    icon: "success",
-                    });
-                 const url1 = await storagePath.getDownloadURL();
-                 setImage1(url1)
-            }
-            catch(error){
-                console.log(error)
-                swal({
-                    title: "error al subir",
-                    icon: "warninng",
-                    });
-            }
-           }else if(file1 && file2 && ((file1.type ==='image/jpeg' ||file1.type ==='image/png'|| file1.type ==='image/jpg') && (file2.type === 'image/jpeg' || file2.type ==='image/png'|| file2.type === 'image/jpg'))){
-                
-                const storagePath = storageRef.child(file1.name);
-                const storagePath2 = storageRef.child(file2.name);
-                
-                try{
-                const enviar1=await storagePath.put(file1)
-                const enviar2=await storagePath2.put(file2) 
-                console.log(enviar1, enviar2)
-                swal({
-                    title: "Imagenes subidas a la base de datos",
-                    icon: "success",
-                });
-    
-                const url1 = await storagePath.getDownloadURL();
-                const url2 = await storagePath2.getDownloadURL();
-                setImage1(url1)
-                setImage2(url2)
-                }
-                catch(error){
-                    console.log(error)
-                    swal({
-                        title: "error al subir",
-                        icon: "warning",
-                        });
-                } 
-        }
+        LoadImg(file1, file2).then(r=>{
+            setImage1(r.img1)
+            setImage2(r.img2)
+            setLoadingImg(false)
+        })
     }
 
 
@@ -140,17 +88,17 @@ const Update = () => {
 
             formik.setFieldValue('category', document.data().category)
             formik.setFieldValue('name', document.data().name)
+            formik.setFieldValue('offer', document.data().offer)
             formik.setFieldValue('info', document.data().info)
             formik.setFieldValue('price', document.data().price)
+            formik.setFieldValue('oldPrice', document.data().price)
 
             setImage1(document.data().image1)
-            setImage2(document.data().image2)
-
+            setImage2(document.data().image2 ? document.data().image2 : null)
 
             setUpdateProduct(true)
         }
         catch(error){
-            console.log(error)
             swal({
                 title: "Producto no encontrado",
                 icon: "warning",
@@ -162,6 +110,8 @@ const Update = () => {
 
     const inputError={ border: '1px solid red'};
     const textError={color: 'red'};
+    const styleLoading={color: 'black', fontWeight:'bold', fontSize:'25px'}
+
 
     return (
             <form action="" onSubmit={formik.handleSubmit}>
@@ -177,6 +127,7 @@ const Update = () => {
                 <div className="formGroup">
                     <label htmlFor="">Imagenes</label>
                     <input type="file" name="imagenes" multiple className='places' disabled={updateProduct ? false : true} id="" onChange={(e)=>{saveImages(e)}}/>
+                    {loadingImg=== true && <label style={styleLoading}>CARGANDO IMAGENES...</label>}
                 </div>
 
                 <div className="formGroup">
@@ -202,10 +153,17 @@ const Update = () => {
                         <option value="Velas">Escencias y velas</option>
                         <option value="Cannabic">Medicina cannabica</option>
                         <option value="Frutos">Frutos secos</option>
+                        <option value="Aguayos">Aguayos</option>
                     </select>
                     {formik.errors.category && <label htmlFor="" style={textError}>{formik.errors.category}</label>}
                 </div> 
-             
+                <div className='formGroup'>
+                    <select name="offer" id=""  disabled={updateProduct ? false : true} onChange={formik.handleChange} >
+                        <option value={true}>En oferta</option>
+                        <option value={false}>No en oferta</option>
+                    </select>
+                    {formik.errors.offer && <label htmlFor="" style={textError}>{formik.errors.offer}</label>}
+                </div>
                 <div className="formGroup">
                     <label htmlFor="">Nombre</label>
                     <input type="text" name="name" id=""className='places' disabled={updateProduct ? false : true}  onChange={formik.handleChange} value={formik.values.name} style={formik.errors.name && inputError}/>
@@ -220,6 +178,11 @@ const Update = () => {
                     <label htmlFor="">Precio</label>
                     <input type="number" name="price"className='places' disabled={updateProduct ? false : true} onChange={formik.handleChange} id="" value={formik.values.price} style={formik.errors.price && inputError}/>
                     {formik.errors.price && <label htmlFor="" style={textError}>{formik.errors.price}</label>}
+                </div>
+                <div className="formGroup">
+                    <label htmlFor="">Precio viejo</label>
+                    <input type="number" name="oldPrice"className='places' disabled={updateProduct ? false : true} onChange={formik.handleChange} id="" value={formik.values.oldPrice} style={formik.errors.oldPrice && inputError}/>
+                    {formik.errors.oldPrice && <label htmlFor="" style={textError}>{formik.errors.oldPrice}</label>}
                 </div>
                 <div className='subyesContainer'><input type="submit" value="Actualizar producto" disabled={updateProduct ? false : true}  className="subYes" /></div>
             </form>

@@ -40,6 +40,9 @@ const Cart = () => {
                 if(art !== item){
                     return art
                 }
+                else{
+                    return null
+                }
             })
             setCarrito(update)
         }

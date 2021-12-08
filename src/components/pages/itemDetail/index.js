@@ -59,7 +59,7 @@ const ItemDetail = () => {
         equalQuantity();
         getArticle()
         
-    }, [])
+    }, [article.id, id])
     
 
     const addItem=()=>{
