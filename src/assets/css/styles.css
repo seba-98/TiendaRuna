@@ -3,13 +3,30 @@
   height: 140px;
   z-index: 1; }
 
+.brand {
+  display: flex;
+  justify-content: space-between;
+  width: 20%; }
+
+.secondBrand {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  flex-wrap: wrap; }
+
 #hamburger {
   background-color: #C19033; }
 
 .navbar-wrapper {
-  height: 130px; }
-  .navbar-wrapper .hamburger-wrapper i {
-    font-size: 45px; }
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 130px;
+  flex-wrap: wrap; }
+  .navbar-wrapper .hamburger-wrapper {
+    display: flex; }
+    .navbar-wrapper .hamburger-wrapper i {
+      font-size: 45px; }
 
 .header-bar {
   z-index: 1;
@@ -50,7 +67,7 @@
   font-size: 30px; }
 
 .logo-wrapper a img {
-  width: 160px; }
+  width: 200px; }
 
 .btn-runa {
   background-color: #fff !important;
@@ -68,17 +85,17 @@
   border-radius: 10px;
   transition: all 420ms; }
   .carrito-wrapper i {
-    font-size: 25px; }
+    font-size: 40px; }
   .carrito-wrapper:hover {
     background-color: #313131; }
 
 .counter-wrapper {
   right: -5px;
-  top: -6px;
+  top: -17px;
   background-color: #D03030;
   border-radius: 200px;
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,24 +111,40 @@
 .fs-72 {
   font-size: 72px; }
 
-@media (max-width: 1000px) {
-  .login-wrapper {
-    display: none !important; }
-  .input-buscando-wrapper {
-    display: none; } }
+.fs-72 {
+  font-size: 62px; }
 
-@media (max-width: 374px) {
+@media (max-width: 720px) {
   .logo-wrapper a img {
-    width: 140px !important; }
-  .hamburger-wrapper i {
-    font-size: 40px !important; } }
-
-@media (max-width: 580px) {
+    width: 140px; }
+  .carrito-wrapper i {
+    font-size: 20px; }
+  .counter-wrapper {
+    right: -5px;
+    top: -10px;
+    background-color: #D03030;
+    border-radius: 200px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px; }
+    .counter-wrapper span {
+      font-size: 13px;
+      color: #fff; }
+  .btn-runa {
+    font-size: 13px;
+    background-color: #fff !important;
+    color: #AE8636 !important;
+    padding: 0 11px !important; }
+  .brand {
+    width: 200px !important; }
+  .secondBrand {
+    width: 200px !important; }
   .logo-banner {
-    width: 280px;
-    height: 126px; }
-  .fs-72 {
-    font-size: 62px; } }
+    width: 318px;
+    height: 136px; } }
 
 .sidebar-wrapper {
   height: 100vh;
@@ -701,6 +734,7 @@ form {
   width: 100%;
   height: 100vh;
   position: fixed;
+  top: 10px;
   overflow: hidden;
   font-weight: bold;
   color: #585858; }
@@ -814,6 +848,13 @@ form {
     font-size: 25px;
     font-weight: bold; }
 
+.sellProduct {
+  font-size: 25px;
+  border: 8px solid rgba(190, 190, 190, 0.7);
+  margin: 15px 0 15px 0;
+  border-radius: 20px;
+  padding: 20px; }
+
 @media (max-width: 960px) {
   .sell {
     width: 100% !important; }
@@ -832,15 +873,36 @@ form {
       font-weight: bold; } }
 
 .backButtom {
-  background-color: white;
-  font-size: 70px;
-  border-radius: 50%;
-  padding: 3px 10px 3px 10px;
-  border: 5px solid #3d3d3d;
+  font-size: 100px;
+  font-weight: bold;
+  padding: 0px;
   color: #3d3d3d; }
-  .backButtom:hover {
-    border: 5px solid #c19033;
-    color: #c19033; }
+
+.info {
+  width: 100%;
+  min-height: 600px;
+  height: auto;
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.infoTextContent {
+  display: flex;
+  flex-direction: column; }
+  .infoTextContent .infoText {
+    margin: 50px 0 50px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 100px; }
+    .infoTextContent .infoText h3 {
+      font-size: 38px; }
+    .infoTextContent .infoText p {
+      font-size: 25px; }
 
 button {
   border: none;

@@ -35,7 +35,7 @@ const SellItem = ({data}) => {
                 data.dataProduct.map((product,idx)=>{
 
                     return(
-                        <section className='sellItemData' key={idx}>
+                        <section className='sellProduct' key={idx}>
                             <p>Nombre: {product.nameProduct}</p>
                             <p>Unidades: {product.cantProduct}</p>
                             <p>Total del producto: {product.totalProductPrice} $</p>

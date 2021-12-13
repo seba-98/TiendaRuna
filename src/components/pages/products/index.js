@@ -66,16 +66,12 @@ const Products =()=> {
 			else if(paramId === 'sahumos'){setH2('Sahumos'); setImg(sahumos)}
 			else if(paramId === 'cannabic'){setH2('Medicina cannabica natural'); setImg(cannabic)}
 			else if(paramId === 'frutos'){setH2('Frutos secos'); setImg(frutos)}
-			else if(paramId === 'allarticles'){setH2('Frutos secos'); setImg(all)}
+			else if(paramId === 'allarticles'){setH2('Todos los productos'); setImg(all)}
 		}
 
 		setData()
 		setParamId(id)
-		loadArticles(paramId).then(r=>{
-
-				setProducts(r.arr ?  r.arr : r)
-				setH2(c=> r.h2 ? r.h2 : c)
-		})
+		loadArticles(paramId).then(r=>{setProducts(r)})
 		
     },[id, paramId])
     
@@ -85,7 +81,7 @@ const Products =()=> {
             <Banner  height='500px' img={img}  h2={h2} dis='none'/>
 
 			<section class="productos-section w-100">
-					<BackButtom style={{backgroundColor:'rgb(206,165,93)'}} nav='/home'/>
+					<BackButtom style={{backgroundColor:'rgb(193,144,51)'}} nav='/home'/>
 					<div class="container productos-container">
 
 						<div class="row ">

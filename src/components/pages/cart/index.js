@@ -60,7 +60,7 @@ const Cart = () => {
     return (
         <ul className='cartContainer'>
             <div className='contentAddButton'>
-                    <BackButtom nav='/home'/>
+                    <BackButtom nav='/home' style={{backgroundColor:'white'}} />
                     <h3 style={{fontSize:'25px', color:'black'}}>Carrito de compras</h3>
             </div>
 

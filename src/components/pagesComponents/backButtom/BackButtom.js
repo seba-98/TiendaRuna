@@ -6,9 +6,9 @@
      return (
          <>
             {nav ?
-            <Link to={nav}><button className='backButtom' style={style}>🢀</button></Link>
+            <Link to={nav}><button className='backButtom' style={style}>⇦</button></Link>
             :
-            <button className='backButtom' style={style} onClick={()=>{render(true)}}>🢀</button>
+            <button className='backButtom' style={style} onClick={()=>{render(true)}}>⇦</button>
             }
          </>   
      )

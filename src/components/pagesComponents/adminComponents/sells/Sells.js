@@ -25,7 +25,7 @@ const Sells = () => {
     return (
         <>
         <div className='contentButton'>
-            <BackButtom render={(e)=>{setSellData(e)}} nav={sellData !== true ? null : '/home'}/>
+            <BackButtom render={(e)=>{setSellData(e)}} nav={sellData !== true ? null : '/home'} style={{backgroundColor:'rgb(255, 255, 255)'}}/>
             <h3 className='sellTitle'>{sellData !==true ? 'Gestión de ventas' : 'Información de venta'}</h3>
         </div>
 

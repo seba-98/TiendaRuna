@@ -116,7 +116,7 @@ const Update = () => {
     return (
             <form action="" onSubmit={formik.handleSubmit}>
                  <div className='contentAddButton'>
-                    <BackButtom nav='/home'/>
+                    <BackButtom nav='/home' style={{backgroundColor:'rgb(255, 255, 255)'}}/>
                     <h3 style={{fontSize:'25px', color:'black'}}>Actualizar producto</h3>
                  </div>
                 <div className="formGroup">
@@ -129,7 +129,6 @@ const Update = () => {
                     <input type="file" name="imagenes" multiple className='places' disabled={updateProduct ? false : true} id="" onChange={(e)=>{saveImages(e)}}/>
                     {loadingImg=== true && <label style={styleLoading}>CARGANDO IMAGENES...</label>}
                 </div>
-
                 <div className="formGroup">
                     <label htmlFor="">Categoría</label>
                     <select name="category" id="" className='places' disabled={updateProduct ? false : true} onChange={formik.handleChange} value={formik.values.category} style={formik.errors.category && inputError}>
@@ -158,6 +157,7 @@ const Update = () => {
                     {formik.errors.category && <label htmlFor="" style={textError}>{formik.errors.category}</label>}
                 </div> 
                 <div className='formGroup'>
+                <label htmlFor="">Poner en oferta</label>
                     <select name="offer" id=""  disabled={updateProduct ? false : true} onChange={formik.handleChange} >
                         <option value={true}>En oferta</option>
                         <option value={false}>No en oferta</option>

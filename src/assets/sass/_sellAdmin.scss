@@ -65,6 +65,7 @@
     width: 80%;
 
     .sellItemData{
+        
         h3{
             font-size: 40px;
         }
@@ -76,6 +77,13 @@
     }
 }
 
+.sellProduct{
+    font-size: 25px;
+    border: 8px solid rgba(190, 190, 190, 0.7);
+    margin: 15px 0 15px 0;
+    border-radius: 20px;
+    padding: 20px;
+}
 
 @media(max-width: 960px){
 

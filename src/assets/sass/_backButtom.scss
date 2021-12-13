@@ -1,14 +1,9 @@
 
-
 .backButtom{
-    background-color: white;
-    font-size: 70px;
-    border-radius: 50%;
-    padding: 3px 10px 3px 10px;
-    border: 5px solid rgb(61, 61, 61);
+    
+    font-size: 100px;
+    font-weight: bold;
+    padding: 0px;
     color: rgb(61, 61, 61);
-    &:hover{
-        border: 5px solid rgb(193,144,51);
-        color: rgb(193,144,51);
-    }
+    
 }

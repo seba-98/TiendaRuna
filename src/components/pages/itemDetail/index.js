@@ -107,7 +107,7 @@ const ItemDetail = () => {
         <div className='detailContent'>
 
             <div className='detailButtonContent'>
-                <BackButtom nav={`/home/products/${article.category}`}/>
+                <BackButtom style={{backgroundColor:'rgb(255, 255, 255)'}} nav={`/home/products/${article.category}`} />
                 <h2>{article.name}</h2>
             </div>
             <div className="itemImages">

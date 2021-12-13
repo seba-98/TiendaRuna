@@ -23,10 +23,9 @@ export const loadArticles = async(paramId) => {
             arr.push({...product.data(), id: product.id})
         })
 
-        return {
-            arr:arr,
-            h2: 'Todos los productos'
-        };
+        return arr;
+            
+        
     }
    
 }

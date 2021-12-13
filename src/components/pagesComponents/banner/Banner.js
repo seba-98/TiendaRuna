@@ -11,7 +11,7 @@ const Banner = ({img={banner}, height, h2='Productos de poder', dis='block'}) =>
                 <div className="row h-100">
                     <div className="col-12 h-100">
                         <div className="d-flex flex-column justify-content-center align-items-end h-100">
-                            <img src={imgFondoBlanco} alt="Runa Tienda" class="logo-banner" style={{display:`${dis}`}}/>
+                            <img src={imgFondoBlanco} alt="Runa Tienda"  class="logo-banner" style={{display:`${dis}`}}/>
                             <h1 className="text-white fs-72" style={{display:`${dis}`}}>Tienda holística</h1>
                             <h2 className={`text-white fs-72 ${dis==='none'&& 'middle-text-categoria'}`}>{h2}</h2>
                         </div>  

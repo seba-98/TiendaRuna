@@ -40,7 +40,7 @@ const Remove = () => {
         
              <form action="" >
                 <div className='contentAddButton'>
-                    <BackButtom nav='/home'/>
+                    <BackButtom nav='/home' style={{backgroundColor:'rgb(255, 255, 255)'}}/>
                     <h3 style={{fontSize:'25px', color:'black'}}>Remover producto</h3>
                 </div>
                     <div className='ulDelete'>

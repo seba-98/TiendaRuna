@@ -81,7 +81,7 @@ const Add = () => {
             <form action="" onSubmit={formik.handleSubmit}>
             
                 <div className='contentAddButton'>
-                    <BackButtom nav='/home'/>
+                    <BackButtom nav='/home' style={{backgroundColor:'rgb(255, 255, 255)'}}/>
                     <h3 style={{fontSize:'25px', color:'black'}}>Añadir producto</h3>
                 </div>
                 <div className="formGroup">
@@ -121,6 +121,7 @@ const Add = () => {
                     {formik.errors.category && <label htmlFor="" style={textError}>{formik.errors.category}</label>}
                 </div> 
                 <div className='formGroup'>
+                <label htmlFor="">Poner en oferta</label>
                     <select name="offer" id="" disabled={!image1 && !image2 ? true : false} onChange={formik.handleChange} >
                         <option value={true}>En oferta</option>
                         <option value={false}>No en oferta</option>
