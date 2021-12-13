@@ -23,10 +23,9 @@ const Navbar = ({over}) => {
                     </div>
 
                     <div className="logo-wrapper">
-                        <Link   Link to='/'><img src={logo} alt="Runa Tienda"/></Link>
+                        <Link to='/'><img src={logo} alt="Runa Tienda"/></Link>
                     </div>
                 </div>
-
                 <div className="secondBrand">
                     <div className="login-wrapper d-flex justify-content-center align-items-center">
                         <i className="far fa-user text-white me-3"></i>
@@ -46,7 +45,6 @@ const Navbar = ({over}) => {
                         </div>
                     </Link>
                 </div>
-
             </div>
         </div>
      

@@ -1,23 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import History from '../../pagesComponents/infoComponents/History'
 import Contact from '../../pagesComponents/infoComponents/Contact'
 import Buy from '../../pagesComponents/infoComponents/Buy'
-
-import { useParams } from 'react-router'
+import { useLocation } from 'react-router-dom';
 
 
 const Info = () => {
 
-    const {data} = useParams();
+    const {pathname} = useLocation();
+    const [route, setRoute] = useState(pathname)
+
+    useEffect(()=>{
+
+        setRoute(pathname)
+
+    }, [pathname])
+
 
     const rend = () =>{
-        if(data === 'history'){
+        if(route === '/info/historia'){
             return <History />
         }
-        else if(data === 'contact'){
+        else if(route === '/info/contacto'){
             return <Contact />
         }
-        else if(data === 'buy'){
+        else if(route === '/info/comprar'){
             return <Buy />
         }
     }

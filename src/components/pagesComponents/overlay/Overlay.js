@@ -10,9 +10,9 @@ const Overlay = ({over}) => {
                         <i className="fas fa-times fs-3 text-dark"></i>
                     </div> 
                     <ul className="mt-5">
-                        <Link to='/info/history'><li className="pt-4 fs-5 fw-bold w-75"> Nuestra Historia </li></Link>
+                        <Link to='/info/historia'><li className="pt-4 fs-5 fw-bold w-75"> Nuestra Historia </li></Link>
                         <Link to='/info/contacto'><li className="pt-3 fs-5 fw-bold w-75">Contacto</li> </Link>
-                        <Link to='/info/buy'><li className="pt-3 fs-5 fw-bold w-75 ">¿Como comprar?</li></Link>   
+                        <Link to='/info/comprar'><li className="pt-3 fs-5 fw-bold w-75 ">¿Como comprar?</li></Link>   
                         <br/>
                         <li className="pt-3 fs-5 fw-bold w-75">Resinas para Sahumar</li>
                         <li className="pt-3 fs-5 fw-bold w-75">Polvos para Sahumar</li>
