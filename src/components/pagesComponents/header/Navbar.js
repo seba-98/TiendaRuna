@@ -2,7 +2,8 @@ import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/img/logo.png'
 import { cartContext } from '../../../CartContext'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart, faUser, faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ({over}) => {
     const [carrito]=useContext(cartContext);
@@ -19,7 +20,7 @@ const Navbar = ({over}) => {
                 
                 <div className='brand'>
                     <div className="hamburger-wrapper pointer navItem">
-                        <button className="text-dark" id="hamburger" onClick={()=>{over(true)}}><i className="fas fa-bars pointer"></i></button>                              
+                        <button className="text-dark" id="hamburger" onClick={()=>{over(true)}}><FontAwesomeIcon icon={faBars} size='3x'/></button>                              
                     </div>
 
                     <div className="logo-wrapper">
@@ -28,7 +29,7 @@ const Navbar = ({over}) => {
                 </div>
                 <div className="secondBrand">
                     <div className="login-wrapper d-flex justify-content-center align-items-center">
-                        <i className="far fa-user text-white me-3"></i>
+                        <FontAwesomeIcon icon={faUser} size='2x' style={{color:'white', margin:'10px'}} />
                         <div className="d-flex flex-column">
                             <p className="fs-6 fw-bold text-white">Hola !</p>
                             <div className="d-flex">
@@ -38,7 +39,7 @@ const Navbar = ({over}) => {
                     </div>
                     <Link to='/cart'>
                         <div className="carrito-wrapper mt-2 position-relative pointer">
-                            <i className="fas fa-shopping-cart text-white"></i>
+                            <FontAwesomeIcon icon={faShoppingCart}size='2x' />
                             <div className="counter-wrapper position-absolute ">
                                 <span>{carrito.reduce((total, item)=>{return total + item.cantidad},0) }</span>
                             </div>
