@@ -281,6 +281,8 @@ ul {
   background-position: 0%; }
 
 .middle-text-categoria {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
   background-color: rgba(0, 0, 0, 0.4);
