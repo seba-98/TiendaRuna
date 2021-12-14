@@ -80,19 +80,19 @@ const Products =()=> {
         <div>
             <Banner  height='500px' img={img}  h2={h2} dis='none'/>
 
-			<section class="productos-section w-100">
+			<section className="productos-section w-100">
 					<BackButtom style={{backgroundColor:'rgb(193,144,51)'}} nav='/home'/>
-					<div class="container productos-container">
+					<div className="container productos-container">
 
-						<div class="row ">
-							<div class="col-6 ps-5 mt-4 mb-5 ">
-								<h4 class="font-runa">Runa- {h2}</h4>
+						<div className="row ">
+							<div className="col-6 ps-5 mt-4 mb-5 ">
+								<h4 className="font-runa">Runa- {h2}</h4>
 							</div>
-							<div class="col-6 mt-4 mb-5 ">
-								<div class="d-flex justify-content-end">
+							<div className="col-6 mt-4 mb-5 ">
+								<div className="d-flex justify-content-end">
 
-									<ul class="btn categorySelection">
-										<li>Filtrar <i class="fas fa-filter"></i>
+									<ul className="btn categorySelection">
+										<li>Filtrar <i className="fas fa-filter"></i>
 											<ul className='ulFilter'>
 												<Link to='/home/products/allarticles'><li >Todos los productos</li></Link>
 												<Link to='/home/products/sahuhierbas'><li >Hierbas para sahumar</li></Link>
@@ -124,8 +124,8 @@ const Products =()=> {
 							</div>
 						</div>
 
-						<div class="row ">
-							<div class="col-4 ps-5 mb-5 productsSubContainer">
+						<div className="row ">
+							<div className="col-4 ps-5 mb-5 productsSubContainer">
 							{
 								products&& products.map((product, idx)=>{
 									return<ProductItem {...product} key={idx}/>
