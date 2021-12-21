@@ -30,7 +30,7 @@ function App() {
               <Route  path="/itemDetail/:id" exact element={<ItemDetail />}/>
               <Route  path="/cart" exact element={<Cart />}/>
               <Route  path="/buyForm" exact element={<BuyForm />}/>
-              <Route  path="/info/:data" exact element={<Info />}/>
+              <Route  path="/info/comprar" exact element={<Info />}/>
           </Routes>
           {openOver === true && <Overlay over={(e)=>{setOpenOver(e)}}/>}
         <Footer />

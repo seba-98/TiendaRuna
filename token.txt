@@ -1,0 +1,23 @@
+1//0hFYvtbqKDeS5CgYIARAAGBESNwF-L9Irn5UFq1iVZ95rZMbDI4N548yMVGhXv30UuTJ79pDZXau6zKsml12rmYKkSXMjLpDzvko
+
+
+App information:
+  - App ID: 1:994666451247:web:d12d2c2d9d3badabbb51da
+  - Display name: Runa
+
+You can run this command to print out your new app's Google Services config:
+  firebase apps:sdkconfig WEB 1:994666451247:web:d12d2c2d9d3badabbb51da}
+
+
+runaAdmin123
+
+
+
+Buenas a todos! Alguien sabria decirme como configurar correctamente github pages para subir mi app de react? Segui todos los pasos instalando el gh pages con npm y configure en el package.json el homepage y los scripts de ejecucion de deploy y predeploy y los ejecute, el problema es que al ingresar a la url de mi app en github solo me aparece la pagina
+de error 404, estoy usando react router dom, probe en las rutas del app.js varias combinaciones con el nombre del proyecto pero no funciono.
+
+
+Hierbas para sahumar
+Polvos para sahumar
+Palo santo
+Hierbas medicinales, infusiones y té en hebras

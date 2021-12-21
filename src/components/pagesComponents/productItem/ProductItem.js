@@ -26,11 +26,11 @@ const ProductItem = ({image1, name, info, price, id, offer, oldPrice}) => {
 								<div className='productImgContainer'>
 									<img src={image1} alt="" width='200px'/>
 								</div>
-								<div class="d-flex flex-column ps-4 pt-3 product-detail">	
+								<div className="d-flex flex-column ps-4 pt-3 product-detail">	
 									<h5>{name}</h5>
 									<p>{info}</p> 
-									<div class="mt-04 mb-4">
-										<ul class="ps-0 ">
+									<div className="mt-04 mb-4">
+										<ul className="ps-0 ">
                                             {
                                             isOffer===true&& <li> <span className="fw-bold"><strike> {oldPrice ? oldPrice : price+30*price/100}$</strike> Antes</span></li>}
 											<li> <span className="fw-bold">{price}$ c/u</span> {isOffer===true&& <span style={offerStyle}>¡OFERTA!</span>}</li>

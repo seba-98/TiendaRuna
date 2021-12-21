@@ -5,14 +5,17 @@ import "firebase/compat/firestore"
 
 
 export const app= firebase.initializeApp({
-    "projectId": "runa-d9f8c",
-    "appId": "1:994666451247:web:d12d2c2d9d3badabbb51da",
-    "storageBucket": "runa-d9f8c.appspot.com",
-    "locationId": "us-central",
-    "apiKey": "AIzaSyCV4gnq87jWuJHoQxVnLMt5JwNy_jzmsxE",
-    "authDomain": "runa-d9f8c.firebaseapp.com",
-    "messagingSenderId": "994666451247"
+  "apiKey": process.env.REACT_APP_API_KEY,
+  "authDomain": process.env.REACT_APP_AUTH_DOMAIN,
+  "projectId": process.env.REACT_APP_PROYECT_ID,
+  "storageBucket": process.env.REACT_APP_STORAGE_BUCKET,
+  "messagingSenderId": process.env.REACT_APP_MESSAGING_SENDER_ID,
+  "appId": process.env.REACT_APP_APP_ID
   });
 
   // Initialize Firebase
 export const db = getFirestore(app); 
+
+
+
+

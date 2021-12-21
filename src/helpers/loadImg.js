@@ -5,9 +5,11 @@ import swal from 'sweetalert';
 
 export const LoadImg = async(file1, file2) =>{
 
+
     const storageRef = app.storage().ref();
     let image1;
     let image2;
+
 
         if(file1 && !file2 &&  ( file1.type !=='image/jpeg' &&  file1.type !=='image/png' && file1.type !=='image/jpg')){
 

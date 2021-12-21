@@ -33,14 +33,14 @@ import all from '../../pagesComponents/category/categoryImg/allArticles.jpg'
 
 const Products =()=> {
 
-
+	
 	const{id} = useParams()
 	const[h2, setH2]=useState('')
-
+	
 	const [products, setProducts] = useState([]);
 	const [img, setImg] = useState(defaultImg);
 	const [paramId, setParamId] = useState(id.toLowerCase());
-
+	const [loading, setLoading] = useState(true)
 	
 	
     useEffect(()=>{
@@ -69,11 +69,18 @@ const Products =()=> {
 			else if(paramId === 'allarticles'){setH2('Todos los productos'); setImg(all)}
 		}
 
+
 		setData()
 		setParamId(id)
-		loadArticles(paramId).then(r=>{setProducts(r)})
+		loadArticles(paramId).then(r=>{
+			setProducts(r)
+			setLoading(false)
+		})
 		
     },[id, paramId])
+	
+	
+	
     
     return (
 		
@@ -115,10 +122,9 @@ const Products =()=> {
 												<Link to='/home/products/velas'><li>Escencias y velas</li></Link>
 												<Link to='/home/products/cannabic'><li>Medicina cannabica</li></Link>
 												<Link to='/home/products/frutos'><li>Frutos secos</li></Link>
-												
+												<Link to='/home/products/aguayos'><li>Aguayos</li></Link>
 											</ul>
 										</li>
-										
 									</ul>
 								</div>
 							</div>
@@ -127,9 +133,11 @@ const Products =()=> {
 						<div className="row ">
 							<div className="col-4 ps-5 mb-5 productsSubContainer">
 							{
-								products&& products.map((product, idx)=>{
+								products.length > 0 ? products.map((product, idx)=>{
 									return<ProductItem {...product} key={idx}/>
 								})
+								:
+							    <h4 style={{color:'black'}}>{!loading ? 'Aun no se agregaron artculos en esta categoría' : 'Cargando productos...'}</h4>					
 							}
 							</div>
 						</div>

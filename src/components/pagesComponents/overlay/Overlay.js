@@ -12,13 +12,11 @@ const Overlay = ({over}) => {
                         <FontAwesomeIcon icon={faTimes} size="2x"/>
                     </div> 
                     <ul className="mt-5">
-                        <Link to='/info/historia'><li className="pt-4 fs-5 fw-bold w-75"> Nuestra Historia </li></Link>
-                        <Link to='/info/contacto'><li className="pt-3 fs-5 fw-bold w-75">Contacto</li> </Link>
                         <Link to='/info/comprar'><li className="pt-3 fs-5 fw-bold w-75 ">¿Como comprar?</li></Link>   
                         <br/>
-                        <li className="pt-3 fs-5 fw-bold w-75">Resinas para Sahumar</li>
-                        <li className="pt-3 fs-5 fw-bold w-75">Polvos para Sahumar</li>
-                        <li className="pt-3 fs-5 fw-bold w-75">Sahumerios</li>
+                        <Link to='/home/products/sahuresinas'><li className="pt-3 fs-5 fw-bold w-75">Resinas para Sahumar</li></Link>
+                        <Link to='/home/products/sahupolvo'><li className="pt-3 fs-5 fw-bold w-75">Polvos para Sahumar</li></Link>
+                        <Link to='/home/products/satyaygoloka'><li className="pt-3 fs-5 fw-bold w-75">Sahumerios</li></Link>
                     </ul>
                 </div>  
         </>

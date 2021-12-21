@@ -56,7 +56,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Todos los artículos</span>
                   </div>
-                  <img src={all} alt="hierbas" className="img-fluid " style={{border:'8px solid rgba(243, 49, 49, 0.7)'}}/>
+                  <img src={all} alt="allarticles" className="img-fluid " style={{border:'8px solid rgba(243, 49, 49, 0.7)'}}/>
                 </div>
               </Link>
             </div>
@@ -66,7 +66,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
                   </div>
-                  <img src={sahuHerb} alt="hierbas" className="img-fluid categoryImg" />
+                  <img src={sahuHerb} alt="sahumos_hierbas" className="img-fluid categoryImg" />
                 </div>
               </Link>
             </div>
@@ -76,7 +76,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Palo santo</span>
                   </div>
-                  <img src={santo} alt="Sahumerios" className="img-fluid " />
+                  <img src={santo} alt="paloSanto" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -86,7 +86,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
                   </div>
-                  <img src={herb} alt="Sahumerios" className="img-fluid " />
+                  <img src={herb} alt="hierbas" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -99,7 +99,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Todos los artículos</span>
                   </div>
-                  <img src={all} alt="hierbas" className="img-fluid " style={{border:'8px solid rgba(243, 49, 49, 0.7)'}}/>
+                  <img src={all} alt="allarticles" className="img-fluid " style={{border:'8px solid rgba(243, 49, 49, 0.7)'}}/>
                 </div>
               </Link>
             </div>
@@ -109,7 +109,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Hierbas para sahumar</span>
                   </div>
-                  <img src={sahuHerb} alt="hierbas" className="img-fluid " />
+                  <img src={sahuHerb} alt="sahumos de hierbas" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -119,7 +119,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Polvos para sahumar</span>
                   </div>
-                  <img src={sahuPolv} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuPolv} alt="polvo para sahumar" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -129,7 +129,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Palo santo</span>
                   </div>
-                  <img src={santo} alt="Sahumerios" className="img-fluid " />
+                  <img src={santo} alt="palosanto" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -139,7 +139,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Hierbas medicinales, infusiones y té en hebras</span>
                   </div>
-                  <img src={herb} alt="Sahumerios" className="img-fluid " />
+                  <img src={herb} alt="hierbas" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -149,7 +149,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Resinas para sahumar</span>
                   </div>
-                  <img src={sahuRes} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuRes} alt="resinas para sahumar" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -159,7 +159,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumos naturales: blends de hierbas y resinas</span>
                   </div>
-                  <img src={sahuNat} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahuNat} alt="sahumos naturales" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -169,7 +169,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Linea sagrada madre</span>
                   </div>
-                  <img src={sagMadre} alt="Sahumerios" className="img-fluid " />
+                  <img src={sagMadre} alt="productos sagrada madre" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -179,7 +179,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumerios SATYA Y GOLOKA</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahu} alt="satyaygoloka" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -189,7 +189,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumerios y conitos TRIBAL SOUL INDIA</span>
                   </div>
-                  <img src={cono} alt="Sahumerios" className="img-fluid " />
+                  <img src={cono} alt="tribalsoul" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -199,7 +199,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumerios india Sree vani y Sandesh</span>
                   </div>
-                  <img src={sahu} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahu} alt="sreevani" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -209,7 +209,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Aguas florida y colonias MyL</span>
                   </div>
-                  <img src={aqua} alt="Sahumerios" className="img-fluid " />
+                  <img src={aqua} alt="aguas" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -219,7 +219,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Carbones</span>
                   </div>
-                  <img src={carbon} alt="Sahumerios" className="img-fluid " />
+                  <img src={carbon} alt="carbones" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -229,7 +229,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Mat de yoga</span>
                   </div>
-                  <img src={mat} alt="Sahumerios" className="img-fluid " />
+                  <img src={mat} alt="mats" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -239,7 +239,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Tarot, cartas, oraculos y runas vikingas</span>
                   </div>
-                  <img src={tarot} alt="Sahumerios" className="img-fluid " />
+                  <img src={tarot} alt="tarot" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -249,7 +249,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Aguayos</span>
                   </div>
-                  <img src={aguayos} alt="Sahumerios" className="img-fluid " />
+                  <img src={aguayos} alt="aguayos" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -259,7 +259,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumadores</span>
                   </div>
-                  <img src={sahumadores} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahumadores} alt="sahumadores" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -269,7 +269,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Difusores y aromatizantes</span>
                   </div>
-                  <img src={difusores} alt="Sahumerios" className="img-fluid " />
+                  <img src={difusores} alt="difusores" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -279,7 +279,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Sahumos</span>
                   </div>
-                  <img src={sahumos} alt="Sahumerios" className="img-fluid " />
+                  <img src={sahumos} alt="sahumos" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -287,9 +287,9 @@ const Category = () => {
               <Link to={`/home/products/${"velas"}`}>
                 <div className=" position-relative ">
                   <div className="middle-text">
-                    <span>Escencias y velas</span>
+                    <span>Esencias y velas</span>
                   </div>
-                  <img src={velas} alt="Sahumerios" className="img-fluid " />
+                  <img src={velas} alt="esencias y velas" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -297,9 +297,9 @@ const Category = () => {
               <Link to={`/home/products/${"cannabic"}`} >
                 <div className=" position-relative ">
                   <div className="middle-text">
-                    <span>Medicina cannabica</span>
+                    <span>Medicina cannábica</span>
                   </div>
-                  <img src={cannabic} alt="Sahumerios" className="img-fluid " />
+                  <img src={cannabic} alt="medicina cannabica" className="img-fluid " />
                 </div>
               </Link>
             </div>
@@ -309,7 +309,7 @@ const Category = () => {
                   <div className="middle-text">
                     <span>Frutos secos</span>
                   </div>
-                  <img src={frutos} alt="Sahumerios" className="img-fluid " />
+                  <img src={frutos} alt="frutos secos" className="img-fluid " />
                 </div>
               </Link>
             </div>

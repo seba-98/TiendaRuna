@@ -51,8 +51,8 @@ const Update = () => {
 
     const product ={
         category:formik.values.category.toLowerCase(),
-        image1: image1.trim(),
-        image2: image2 ? image2.trim() : null,
+        image1: image1,
+        image2: image2 ? image2 : null,
         offer: formik.values.offer,
         info: formik.values.info.trim(),
         name: formik.values.name.trim(),

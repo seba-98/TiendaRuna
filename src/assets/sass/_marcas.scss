@@ -5,12 +5,22 @@
     background-color: #E26767;
     border-radius: 5px;
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    h3{
+        color: white;
+        font-size: 43px;
+        text-shadow: 0px 0px 8px  black;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .marca{
     width: 23%;
     margin: 10px  1% 10px 1%;
+    max-height: 400px;
 }
 .logo-marca
 {
@@ -30,6 +40,7 @@
 
 .imageMarcas{
     width: 100%;
+    border-radius: 20px;
 }
 
 @media(max-width:1180px){
