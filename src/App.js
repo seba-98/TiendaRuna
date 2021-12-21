@@ -12,6 +12,7 @@ import BuyForm from "./components/pages/buyForm";
 import Info from "./components/pages/info";
 import { useState } from "react";
 import { CartProvider } from './CartContext'
+import Error from "./components/pages/errorPage";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <Route  path="/cart" exact element={<Cart />}/>
               <Route  path="/buyForm" exact element={<BuyForm />}/>
               <Route  path="/info/comprar" exact element={<Info />}/>
+              <Route  path="*" exact element={<Error />}/>
           </Routes>
           {openOver === true && <Overlay over={(e)=>{setOpenOver(e)}}/>}
         <Footer />

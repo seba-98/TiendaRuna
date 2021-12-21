@@ -1,0 +1,17 @@
+.errorContent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0 200px 0;
+    .errorBox{
+        background-color: rgba(193, 144, 51, 0.9);
+        border-radius: 20px;
+        color: white;
+        padding: 200px 80px 200px 80px;
+        h3{
+            font-size: 50px;
+
+        }
+    }
+}

@@ -915,6 +915,20 @@ form {
     .infoTextContent .infoText p {
       font-size: 25px; }
 
+.errorContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0 200px 0; }
+  .errorContent .errorBox {
+    background-color: rgba(193, 144, 51, 0.9);
+    border-radius: 20px;
+    color: white;
+    padding: 200px 80px 200px 80px; }
+    .errorContent .errorBox h3 {
+      font-size: 50px; }
+
 button {
   border: none;
   background-color: none; }
