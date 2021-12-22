@@ -35,7 +35,7 @@ const Category = () => {
         <div className="row ms-5 mb-3 mt-3 categoryTitle">
           <div className="col-12">
             <div className="d-flex align-items-center">
-              <h3 className="text-dark me-3">CATEGORIAS DESTACADAS</h3>
+              <h3 className="text-dark me-3">CATEGORÍAS DESTACADAS</h3>
               <button
                 className="text-primary btn btn-link decoration-none"
                 onClick={() => {

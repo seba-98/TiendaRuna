@@ -137,7 +137,7 @@ const Products =()=> {
 									return<ProductItem {...product} key={idx}/>
 								})
 								:
-							    <h4 style={{color:'black'}}>{!loading ? 'Aun no se agregaron artculos en esta categoría' : 'Cargando productos...'}</h4>					
+							    <h4 style={{color:'black'}}>{!loading ? 'Aun no se agregaron articulos en esta categoría' : 'Cargando productos...'}</h4>					
 							}
 							</div>
 						</div>
