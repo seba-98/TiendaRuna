@@ -3,6 +3,7 @@ import { cartContext } from '../../../CartContext';
 import swal from 'sweetalert';
 import BackButtom from '../../pagesComponents/backButtom/BackButtom';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../../widgets/scrollRestoration/ScrollToTop';
 
 const Cart = () => {
 
@@ -59,6 +60,7 @@ const Cart = () => {
 
     return (
         <ul className='cartContainer'>
+            <ScrollToTop />
             <div className='contentAddButton'>
                     <BackButtom nav='/home' style={{backgroundColor:'white'}} />
                     <h3 style={{fontSize:'25px', color:'black'}}>Carrito de compras</h3>

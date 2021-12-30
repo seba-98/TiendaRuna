@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import BackButtom from '../../pagesComponents/backButtom/BackButtom';
 import BuyModal from '../../pagesComponents/buyModal/BuyModal';
 import { cartContext } from '../../../CartContext';
+import ScrollToTop from '../../widgets/scrollRestoration/ScrollToTop';
 
 const BuyForm = () => {
 
@@ -66,6 +67,7 @@ const BuyForm = () => {
     return (
 
         <div className='formContent'>
+            <ScrollToTop />
             {set() !==0 ?
             <>
             <div className='contentTitleBuyForm'>

@@ -4,6 +4,7 @@ import { db } from '../../../firebaseConfig';
 import { getDoc, doc} from '@firebase/firestore';
 import { cartContext } from '../../../CartContext';
 import BackButtom from '../../pagesComponents/backButtom/BackButtom';
+import ScrollToTop from '../../widgets/scrollRestoration/ScrollToTop';
 
 
 
@@ -105,6 +106,7 @@ const ItemDetail = () => {
 
     return (
         <div className='detailContent'>
+            <ScrollToTop />
 
             <div className='detailButtonContent'>
                 <BackButtom style={{backgroundColor:'rgb(255, 255, 255)'}} nav={`/home/products/${article.category}`} />

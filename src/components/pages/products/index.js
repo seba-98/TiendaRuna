@@ -7,6 +7,7 @@ import BackButtom from '../../pagesComponents/backButtom/BackButtom'
 import { useParams } from 'react-router'
 import ProductItem from '../../pagesComponents/productItem/ProductItem'
 import { loadArticles } from '../../../helpers/loadArticles'
+import ScrollToTop from '../../widgets/scrollRestoration/ScrollToTop'
 
 import aqua from '../../pagesComponents/category/categoryImg/aqua.jpg'
 import herb from '../../pagesComponents/category/categoryImg/herb.jpg'
@@ -69,7 +70,6 @@ const Products =()=> {
 			else if(paramId === 'allarticles'){setH2('Todos los productos'); setImg(all)}
 		}
 
-
 		setData()
 		setParamId(id)
 		loadArticles(paramId).then(r=>{
@@ -80,7 +80,6 @@ const Products =()=> {
     },[id, paramId])
 	
 	
-	
     
     return (
 		
@@ -88,6 +87,7 @@ const Products =()=> {
             <Banner  height='500px' img={img}  h2={h2} dis='none'/>
 
 			<section className="productos-section w-100">
+				<ScrollToTop />
 					<BackButtom style={{backgroundColor:'rgb(193,144,51)'}} nav='/home'/>
 					<div className="container productos-container">
 

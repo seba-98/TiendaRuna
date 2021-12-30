@@ -8,6 +8,7 @@ import Add from '../../pagesComponents/adminComponents/add/Add';
 import Remove from '../../pagesComponents/adminComponents/remove/Remove';
 import Sells from '../../pagesComponents/adminComponents/sells/Sells';
 import Update from '../../pagesComponents/adminComponents/update/Update';
+import ScrollToTop from '../../widgets/scrollRestoration/ScrollToTop';
 
 const auth= getAuth(app);
 
@@ -42,6 +43,7 @@ const Admin = () => {
 
         return (
             <>
+            <ScrollToTop />
                 <div style={{paddingTop:window === 'remove' ? '200px' : '100px'}}></div>
                 <div className='formContainer' style={{marginBottom: '50px'}}>
                     <h2>Panel de administración</h2>
